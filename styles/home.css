@@ -1,1 +1,95 @@
-/* add home page styles here */
+/* Header Styling */
+
+
+header {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 50vw;
+    display: flex;
+    float: left;
+}
+
+.left button {
+    height: 20px;
+
+}
+
+.right {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.right button {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+
+ /* Body Styles start */
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+section {
+    width: 100vw;
+    height: 450px;
+    position: relative;
+    background-image: url(../assets/taco-map.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.Northwest {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    top: 100px;
+    left: 25%;
+    padding: 0;
+    margin: 0;
+}
+
+.Northeast {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    top: 105px;
+    left: 60%;
+}
+
+.Southwest {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    top: 300px;
+    left: 25%;
+}
+
+.Southeast {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+    top: 300px;
+    left: 60%;
+}
