@@ -25,6 +25,17 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
+// Sign-Up and Login Form
+authenticationButton.addEventListener('click', () => {
+    const displayForm = document.querySelector('.dropdown');  
+    if (displayForm.style.display === 'none') {
+        displayForm.style.display = 'block';
+    } else {
+        displayForm.style.display = 'none';
+    }
+    console.log('clicking the button');
+});
+
 // if user currently logged in, redirect
 // redirectIfLoggedIn();
 

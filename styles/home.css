@@ -28,8 +28,42 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+    z-index: 20;
 }
 
+
+/* Sign-Up/Login Form */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 50px;
+    z-index: 10;
+    background-color:antiquewhite;
+}
+
+.auth-forms {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: ;
+    padding: 0;
+    margin: 0;
+}
+
+.auth-forms form {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 10px;
+}
+
+.auth-forms button {
+    width: fit-content;
+    align-self: center;
+}
 
  /* Body Styles start */
 
