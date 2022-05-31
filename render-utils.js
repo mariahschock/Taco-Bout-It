@@ -13,3 +13,7 @@ export function renderRegions(region) {
 
     return div;
 }
+export function shopForm(Shop_info) {
+    const div = document.createElement('div');
+    div.classList.add(`${Shop_info.id}`);
+}

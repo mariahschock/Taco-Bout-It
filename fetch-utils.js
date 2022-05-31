@@ -36,6 +36,15 @@ export async function logout() {
 
     return (window.location.href = '../');
 }
+export async function home() {
+    return (window.location.href = '../');
+}
+export async function communityBoard() {
+    return (window.location.href = '../community-board');
+}
+
+
+
 
 
 export async function getRegions() {
@@ -46,6 +55,10 @@ export async function getRegions() {
     } else {
         return response.data;
     }
+}
+export async function getShops(idFromShops_info) {
+    const response = await client.from('Region').select('*').match({ id: idFromShops_info });
+    return response.data;
 }
 
 // function checkError({ data, error }) {
