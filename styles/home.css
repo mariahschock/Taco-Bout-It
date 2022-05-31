@@ -1,4 +1,6 @@
-/* add home page styles here */
+/* Header Styling */
+
+
 header {
     height: 60px;
     display: flex;
@@ -26,6 +28,16 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+}
+
+
+ /* Body Styles start */
+
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 section img {
