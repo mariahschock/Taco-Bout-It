@@ -25,7 +25,7 @@ export function renderTacoShops(shops) {
     h1.textContent = shops.name;
 
     const img = document.createElement('img');
-    img.href = `${shops.image}.jpg`;
+    img.src = `../assets/${shops.image}.jpg`;
 
     div.append(h1, img);
 

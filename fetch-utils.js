@@ -48,8 +48,8 @@ export async function getRegions() {
     }
 }
 
-export async function getTacoShops() {
-    const response = await client.from('Shop_info').select('*');
+export async function getTacoShops(id) {
+    const response = await client.from('Shop_info').select('*').match({ region_id: id });
     console.log(response);
     if (response.error) {
         console.error(response.error.message);

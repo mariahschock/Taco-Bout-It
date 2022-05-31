@@ -16,10 +16,13 @@ logoutButton.addEventListener('click', () => {
 });
 
 async function displayTacoShops() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const shopsList = await getTacoShops(id);
+
     const main = document.querySelector('main');
     main.textContent = '';
-    const shopData = await getTacoShops();
-    for (let shops of shopData) {
+    for (let shops of shopsList) {
         const shopsEl = renderTacoShops(shops);
         main.append(shopsEl);
     }
