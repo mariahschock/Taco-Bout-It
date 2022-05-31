@@ -48,6 +48,16 @@ export async function getRegions() {
     }
 }
 
+export async function getTacoShops() {
+    const response = await client.from('Shop_info').select('*');
+    console.log(response);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
