@@ -37,6 +37,17 @@ export async function logout() {
     return (window.location.href = '../');
 }
 
+
+export async function getRegions() {
+    const response = await client.from('Regions').select('*');
+    console.log(response);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }

@@ -1,5 +1,5 @@
 // import { signInUser, signupUser } from './fetch-utils.js';
-import { regions } from './data.js';
+import { checkAuth, getRegions, logout } from './fetch-utils.js';
 import { renderRegions } from './render-utils.js';
 
 // const signInForm = document.getElementById('sign-in');
@@ -11,7 +11,19 @@ import { renderRegions } from './render-utils.js';
 // const signUpPassword = document.getElementById('sign-up-password');
 
 const section = document.querySelector('section');
+const communityBoardButton = document.getElementById('community-board');
+const authenticationButton = document.getElementById('auth');
+const logoutButton = document.getElementById('logout');
 
+// Buttons
+communityBoardButton.addEventListener('click', () => {
+    checkAuth();
+    window.location.href = './community-board';
+});
+
+logoutButton.addEventListener('click', () => {
+    logout();
+});
 
 // if user currently logged in, redirect
 // redirectIfLoggedIn();
@@ -38,11 +50,13 @@ const section = document.querySelector('section');
 //     }
 // });
 
-// function displayRegions() {
-//     for (let region of regions) {
-//         const regionDiv = renderRegions(region);
-//         section.append(regionDiv);
-//     }
-// }
+async function displayRegions() {
+    section.textContent = '';
+    const regions = await getRegions();
+    for (let region of regions) {
+        const regionDiv = renderRegions(region);
+        section.append(regionDiv);
+    }
+}
 
-// displayRegions();
+displayRegions();
