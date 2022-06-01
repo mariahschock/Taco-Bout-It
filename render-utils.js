@@ -73,6 +73,5 @@ export function renderShopInfo(shop_info) {
 
     div.append(h2, img, addressP, phoneP, menuP, aboutP);
     
-    console.log(shop_info);
     return div;
 }

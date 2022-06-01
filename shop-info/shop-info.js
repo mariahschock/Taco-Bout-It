@@ -1,6 +1,10 @@
-import { logout, home, addReview, getReviews, getShops } from '../fetch-utils.js';
+import { logout, home, addReview, getReviews, getShopInfo, getUser } from '../fetch-utils.js';
 import { renderReviews, renderShopInfo } from '../render-utils.js';
 //checkAuth();
+
+const reviewsContainer = document.querySelector('.reviews-container');
+
+
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
     logout();
@@ -21,11 +25,19 @@ boardButton.addEventListener('click', () => {
 const shopForm = document.getElementById('shopReview');
 shopForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    const parameters = new URLSearchParams(window.location.search);
+    const id = parameters.get('id');
     const form = new FormData(shopForm);
     await addReview ({
         content: form.get('content'),
         rating: form.get('ratings'),
+        auth_id: getUser(),
+        shop_id: id,
     });
+    // Can't get form reset to work?
+    reviewsContainer.textContent = '';
+    displayReviews();
+    shopForm.reset();
 });
 
 async function displayReviews() {
@@ -44,9 +56,9 @@ displayReviews();
 async function displayShopInfo() {
     const parameters = new URLSearchParams(window.location.search);
     const id = parameters.get('id');
-    const shopInfo = await getShops(id);
-    const shopSection = document.getElementById('shop-section');
-    shopSection.append(renderShopInfo(shopInfo));
+    const shopInfo = await getShopInfo(id);
+    const shopDiv = document.querySelector('.shop-info');
+    shopDiv.append(renderShopInfo(shopInfo));
 }
 
 displayShopInfo();

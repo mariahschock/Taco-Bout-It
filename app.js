@@ -33,7 +33,6 @@ authenticationButton.addEventListener('click', () => {
     } else {
         displayForm.style.display = 'none';
     }
-    console.log('clicking the button');
 });
 
 // if user currently logged in, redirect

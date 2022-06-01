@@ -43,7 +43,7 @@ export async function communityBoard() {
     return (window.location.href = '../community-board');
 }
 
-
+// Region-page Functions
 export async function getRegions() {
     const response = await client.from('Regions').select('*');
     console.log(response);
@@ -64,12 +64,12 @@ export async function getTacoShops(id) {
     }
 }
 
-export async function getShops(id) {
+
+// Shop-info Functions
+export async function getShopInfo(id) {
     const response = await client.from('Shop_info').select('*').match({ id }).single();
     return response.data;
 }
-
-
 
 export async function addReview(review) {
     const response = await client.from('user_review').insert(review);
