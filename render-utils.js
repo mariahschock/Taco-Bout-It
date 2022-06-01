@@ -27,7 +27,10 @@ export function renderTacoShops(shops) {
     const img = document.createElement('img');
     img.src = `../assets/${shops.image}.jpg`;
 
-    div.append(h1, img);
+    const h2 = document.createElement('h2');
+    h2.textContent = `${shops.rating} 🌮`;
+
+    div.append(h1, img, h2);
 
     return div;
 } 
