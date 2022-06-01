@@ -54,10 +54,22 @@ export async function getRegions() {
     }
 }
 
+export async function getTacoShops(id) {
+    const response = await client.from('Shop_info').select('*').match({ region_id: id });
+    console.log(response);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
 export async function getShops(id) {
     const response = await client.from('Shop_info').select('*').match({ id }).single();
     return response.data;
 }
+
+
 
 export async function addReview(review) {
     const response = await client.from('user_review').insert(review);
