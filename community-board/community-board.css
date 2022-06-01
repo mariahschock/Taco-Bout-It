@@ -19,8 +19,41 @@ header {
     width: 50vw;
     display: flex;
     float: right;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
 }
 
 .right button {
     height: 20px;
+    float: right;
 }
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-right: 500px;
+}
+#tacoBoutIt {
+    width: 10vw;
+    display: flex;
+    float: right;
+   
+   
+}
+#community-board {
+    background-color: coral;
+    width: 25vw;
+    position: fixed ;
+    size: 100vw;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+p {
+    text-decoration-color: blue;
+}
+
+
+    

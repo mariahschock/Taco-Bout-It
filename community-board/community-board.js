@@ -1,8 +1,7 @@
-import { logout, home, checkAuth, fetchPosts } from '../fetch-utils.js';
+import { logout, home, checkAuth, fetchPosts, createPost } from '../fetch-utils.js';
 import { renderPosts } from '../render-utils.js';
 
-
-// checkAuth();
+checkAuth();
 
 const logoutButton = document.getElementById('logout');
 const homeButton = document.getElementById('home');
@@ -19,6 +18,7 @@ homeButton.addEventListener('click', () => {
 });
 
 async function loadData() {
+    postList.textContent = '';
     const posts = await fetchPosts();
     for (let post of posts) {
         const postDiv = renderPosts(post);
@@ -26,3 +26,19 @@ async function loadData() {
     }
 }
 loadData();
+
+const postItForm = document.getElementById('postItForm');
+postItForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(postItForm);
+    const newPost = {
+        new_post: data.get('new_post'),
+        contact: data.get('contact'),
+    };
+    const res = await createPost(newPost);
+    console.log(res);
+    loadData();
+    // (newPost);
+    // (res);
+    
+});

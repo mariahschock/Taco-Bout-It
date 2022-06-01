@@ -105,3 +105,12 @@ export async function fetchPosts() {
     console.log(response);
     return response.data;
 }
+export async function createPost(post) {
+    const response = await client.from('Community_board').insert(post);
+    // return response.data;
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
