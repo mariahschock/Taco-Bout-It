@@ -32,7 +32,7 @@ header {
 }
 
 
-/* Sign-Up/Login Form */
+/* Sign-Up/Login Form Pop Out*/
 .dropdown {
     display: none;
     position: absolute;
@@ -48,7 +48,6 @@ header {
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
-    background-color: ;
     padding: 0;
     margin: 0;
 }
