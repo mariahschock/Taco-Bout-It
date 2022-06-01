@@ -15,21 +15,36 @@
             <button id="community-board">Let's Taco 'Bout It!</button>
         </div>
         <div class="right">
-            <button id="home">home</button>
+            <button id="home">Home</button>
             <button id="logout">Logout</button>
         </div>
-        </header>
-        <section id="shop-section">
-        
-            <form id="shopReview">
-                <input type="text" name="content">
-                <select id="ratings"></select>
-                <button>SUBMIT</button>
-            </form>
-        </section>
-        <div class="reviews-container">
+    </header>
+    <main>
+        <!-- Left Side of Web Page -->
+        <div class="shop-section">
+            <div class="shop-info">
+                
+            </div>
 
+            <div class="reviews-form">
+                <form id="shopReview">
+                    <input type="text" name="content">
+                    <select name="ratings">
+                        <option value="1.0">1 🌮</option>
+                        <option value="2.0">2 🌮🌮</option>
+                        <option value="3.0">3 🌮🌮🌮</option>
+                        <option value="4.0">4 🌮🌮🌮🌮</option>
+                        <option value="5.0">5 🌮🌮🌮🌮🌮</option>
+                    </select>
+                    <button>Submit</button>
+                </form>
+            </div>
         </div>
+        <!-- RIght Side of Web Page -->
+        <div class="reviews-container">
+            
+        </div>
+    </main>
     <script type="module" src="./shop-info.js"></script>    
 </body>
 </html>

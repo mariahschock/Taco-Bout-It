@@ -65,14 +65,14 @@ export function renderShopInfo(shop_info) {
     const phoneP = document.createElement('p');
     phoneP.textContent = shop_info.phone;
 
-    const menuP = document.createElement('p');
-    menuP.textContent = shop_info.menu;
+    const menuA = document.createElement('a');
+    menuA.href = `${shop_info.menu}`;
+    menuA.textContent = shop_info.name;
 
     const aboutP = document.createElement('p');
     aboutP.textContent = shop_info.about;
 
-    div.append(h2, img, addressP, phoneP, menuP, aboutP);
+    div.append(h2, img, addressP, phoneP, menuA, aboutP);
     
-    console.log(shop_info);
     return div;
 }
