@@ -54,6 +54,16 @@ export async function getRegions() {
     }
 }
 
+export async function getRegionName(id) {
+    const response = await client.from('Regions').select('*').match({ id: id });
+    console.log(response);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
 export async function getTacoShops(id) {
     const response = await client.from('Shop_info').select('*').match({ region_id: id });
     console.log(response);

@@ -31,15 +31,20 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    
+}
+#style {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
 }
 img {
+
     width: 250px;
     height: 250px;
     object-fit: cover;
     margin: 10px;
     border: solid 1px rgb(231, 223, 223);
-    ;
+    
 }
 .shops {
     margin: 20px;
@@ -65,6 +70,9 @@ h1 {
     color: rgb(231, 223, 223);
 } */
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-image: url(../assets/AdobeStock_170712686_Preview.jpeg);
     background-size: cover;
     background-position: center;
