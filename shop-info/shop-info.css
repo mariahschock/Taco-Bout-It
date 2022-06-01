@@ -51,7 +51,6 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 3px solid black;
 }
 
 .shop-info {
@@ -60,8 +59,19 @@ main {
     height: 50%;
 }
 
+.shop-info > * {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shop-info a {
+    color: black;
+
+}
+
 .shop-info img {
-    width: 200px;
+    width: 50%;
 }
 
 /* Add Review Form */
@@ -69,6 +79,7 @@ main {
 .reviews-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 50%;
     padding: 10px;
     bottom: 200px
@@ -86,8 +97,8 @@ main {
 
 .reviews-form select, button {
     width: fit-content;
-    display:inline-flex;
-
+    display: flex;
+    margin-top: 3px;
 }
 
 
@@ -97,13 +108,18 @@ main {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 3px solid red;
+    border: 3px solid black;
     column-gap: 20px;
+    padding: 10px;
 }
+
+/* Set up alternating CSS Rules to anchor every 
+second review to the right of the container */
 
 .review {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
     align-items: center;
+    width: 75%;
 }
