@@ -41,52 +41,52 @@ export async function home() {
 }
 export async function communityBoard() {
     return (window.location.href = '../community-board');
-}
-
-
-
-
-
-export async function getRegions() {
-    const response = await client.from('Regions').select('*');
-    console.log(response);
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
+    export async function getRegions() {
+        const response = await client.from('Regions').select('*');
+        console.log(response);
+        if (response.error) {
+            console.error(response.error.message);
+        } else {
+            return response.data;
+        }
+    }
+    export async function getShops(Shops_info) {
+        const response = await client.from('Regions').select('*').match({ id: Shops_info });
         return response.data;
     }
-}
-export async function getShops(Shops_info) {
-    const response = await client.from('Regions').select('*').match({ id: Shops_info });
-    return response.data;
-}
-export async function addReview(review) {
-    const response = await client.from('user_review').insert(review);
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
+    export async function addReview(review) {
+        const response = await client.from('user_review').insert(review);
+        if (response.error) {
+            console.error(response.error.message);
+        } else {
+            return response.data;
+        }
     }
-}
-export async function getReviews(id) {
-    const response = await client.from('user_review').select('*').match({
-        shop_id: id });
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
+    export async function getReviews(id) {
+        const response = await client.from('user_review').select('*').match({
+            shop_id: id });
+        if (response.error) {
+            console.error(response.error.message);
+        } else {
+            return response.data;
+        }
+    }
+    
+    export async function getTacoShops(id) {
+        const response = await client.from('Shop_info').select('*').match({ region_id: id });
+        console.log(response);
+        if (response.error) {
+            console.error(response.error.message);
+        } else {
+            return response.data;
+        }
     }
 }
 
-export async function getTacoShops(id) {
-    const response = await client.from('Shop_info').select('*').match({ region_id: id });
-    console.log(response);
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
-    }
-}
+
+
+
+
 
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;

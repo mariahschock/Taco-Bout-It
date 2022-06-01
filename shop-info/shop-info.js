@@ -1,9 +1,10 @@
-import { logout, home, addReview, getReviews, } from '../fetch-utils.js';
+import { logout, home, addReview, getReviews, checkAuth, } from '../fetch-utils.js';
 import { renderReviews, } from '../render-utils.js';
-//checkAuth();
+checkAuth();
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
     logout();
+    
     window.location.href = '/';
 });
 const homeButton = document.getElementById('home');
@@ -40,3 +41,4 @@ async function displayReviews() {
     }
 }
 displayReviews();
+checkAuth();
