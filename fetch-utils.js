@@ -44,9 +44,6 @@ export async function communityBoard() {
 }
 
 
-
-
-
 export async function getRegions() {
     const response = await client.from('Regions').select('*');
     console.log(response);
@@ -56,10 +53,12 @@ export async function getRegions() {
         return response.data;
     }
 }
-export async function getShops(Shops_info) {
-    const response = await client.from('Regions').select('*').match({ id: Shops_info });
+
+export async function getShops(id) {
+    const response = await client.from('Shop_info').select('*').match({ id }).single();
     return response.data;
 }
+
 export async function addReview(review) {
     const response = await client.from('user_review').insert(review);
     if (response.error) {
@@ -68,6 +67,7 @@ export async function addReview(review) {
         return response.data;
     }
 }
+
 export async function getReviews(id) {
     const response = await client.from('user_review').select('*').match({
         shop_id: id });

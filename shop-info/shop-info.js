@@ -1,5 +1,5 @@
-import { logout, home, addReview, getReviews, } from '../fetch-utils.js';
-import { renderReviews, } from '../render-utils.js';
+import { logout, home, addReview, getReviews, getShops } from '../fetch-utils.js';
+import { renderReviews, renderShopInfo } from '../render-utils.js';
 //checkAuth();
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
@@ -40,3 +40,13 @@ async function displayReviews() {
     }
 }
 displayReviews();
+
+async function displayShopInfo() {
+    const parameters = new URLSearchParams(window.location.search);
+    const id = parameters.get('id');
+    const shopInfo = await getShops(id);
+    const shopSection = document.getElementById('shop-section');
+    shopSection.append(renderShopInfo(shopInfo));
+}
+
+displayShopInfo();
