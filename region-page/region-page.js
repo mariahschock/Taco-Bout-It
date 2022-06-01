@@ -5,6 +5,7 @@ import { renderTacoShops } from '../render-utils.js';
 
 const logoutButton = document.getElementById('logout');
 const communityBoardButton = document.getElementById('community-board');
+const homeButton = document.getElementById('home');
 
 communityBoardButton.addEventListener('click', () => {
     // checkAuth();
@@ -13,6 +14,9 @@ communityBoardButton.addEventListener('click', () => {
 
 logoutButton.addEventListener('click', () => {
     logout();
+});
+homeButton.addEventListener('click', () => {
+    window.location.href = '/';
 });
 
 async function displayTacoShops() {
