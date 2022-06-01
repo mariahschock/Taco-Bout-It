@@ -31,13 +31,12 @@ shopForm.addEventListener('submit', async (e) => {
     await addReview ({
         content: form.get('content'),
         rating: form.get('ratings'),
-        auth_id: getUser(),
         shop_id: id,
     });
     // Can't get form reset to work?
-    reviewsContainer.textContent = '';
     displayReviews();
     shopForm.reset();
+    reviewsContainer.textContent = '';
 });
 
 async function displayReviews() {
