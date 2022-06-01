@@ -100,3 +100,8 @@ export async function getReviews(id) {
     }
 }
 
+export async function fetchPosts() {
+    const response = await client.from('Community_board').select('*');
+    console.log(response);
+    return response.data;
+}
