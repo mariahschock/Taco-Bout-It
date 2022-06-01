@@ -1,5 +1,5 @@
-import { logout, home, communityBoard, } from '../fetch-utils.js';
-
+import { logout, home, addReview, getReviews, } from '../fetch-utils.js';
+import { renderReviews, } from '../render-utils.js';
 //checkAuth();
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
@@ -27,3 +27,16 @@ shopForm.addEventListener('submit', async (e) => {
         rating: form.get('ratings'),
     });
 });
+
+async function displayReviews() {
+    const parameters = new URLSearchParams(window.location.search);
+    const id = parameters.get('id');
+    const reviews = await getReviews(id);
+    const reviewsContainer = document.querySelector('.reviews-container');
+    reviewsContainer.textContent = '';
+    for (let review of reviews) {
+        const reviewDiv = renderReviews(review);
+        reviewsContainer.append(reviewDiv);
+    }
+}
+displayReviews();
