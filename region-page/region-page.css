@@ -1,5 +1,5 @@
 header {
-    height: 60px;
+    height: 75px;
     display: flex;
     flex-direction: row;
 }
@@ -32,13 +32,15 @@ main {
     flex-wrap: wrap;
     justify-content: center;
 }
-#style {
+div#shops {
     display: flex;
-    /* flex-direction: row; */
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
-img {
 
+
+img {
     width: 250px;
     height: 250px;
     object-fit: cover;
@@ -65,14 +67,16 @@ h1 {
     margin-bottom: 0px;
     color: rgb(231, 223, 223);
     text-shadow: 0 0 3px black;
+    
 }
+header h1 {
+    font-size: 3rem;
+    
+} 
 /* h2 {
     color: rgb(231, 223, 223);
 } */
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-image: url(../assets/AdobeStock_170712686_Preview.jpeg);
     background-size: cover;
     background-position: center;
