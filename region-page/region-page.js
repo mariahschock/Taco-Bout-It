@@ -6,6 +6,7 @@ import { renderTacoShops } from '../render-utils.js';
 const logoutButton = document.getElementById('logout');
 const communityBoardButton = document.getElementById('community-board');
 const homeButton = document.getElementById('home');
+const shopsDiv = document.getElementById('shops');
 
 communityBoardButton.addEventListener('click', () => {
     // checkAuth();
@@ -32,3 +33,7 @@ async function displayTacoShops() {
     }
 }
 displayTacoShops();
+
+shopsDiv.addEventListener('click', () => {
+    
+});
