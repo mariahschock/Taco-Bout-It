@@ -81,15 +81,7 @@ export async function getShopInfo(id) {
     return response.data;
 }
 
-export async function addReview(review) {
-    const response = await client.from('user_review').insert(review);
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
-    }
-}
-
+// Displays reviews on the page
 export async function getReviews(id) {
     const response = await client.from('user_review').select('*').match({
         shop_id: id });
@@ -100,3 +92,24 @@ export async function getReviews(id) {
     }
 }
 
+// Adds reviews to the page
+export async function addReview(review) {
+    const response = await client.from('user_review').insert(review);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
+// Deletes reviews from the page
+export async function deleteReview(id) {
+    const response = await client.from('user_review')
+        .delete()
+        .eq('id', id);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
