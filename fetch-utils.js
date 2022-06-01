@@ -77,6 +77,4 @@ export async function getReviews(id) {
         return response.data;
     }
 }
-// function checkError({ data, error }) {
-//     return error ? console.error(error) : data;
-// }
+
