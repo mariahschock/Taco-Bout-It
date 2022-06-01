@@ -35,8 +35,8 @@ export function renderShopInfo(shop_info) {
     const h2 = document.createElement('h2');
     h2.textContent = shop_info.name;
 
-    // const img = document.createElement('img');
-    // img.src = `../assets/${shop_info.image}.jpg`;
+    const img = document.createElement('img');
+    img.src = `../assets/${shop_info.image}.jpg`;
 
     const addressP = document.createElement('p');
     addressP.textContent = shop_info.address;
@@ -50,7 +50,7 @@ export function renderShopInfo(shop_info) {
     const aboutP = document.createElement('p');
     aboutP.textContent = shop_info.about;
 
-    div.append(h2, addressP, phoneP, menuP, aboutP);
+    div.append(h2, img, addressP, phoneP, menuP, aboutP);
     
     console.log(shop_info);
     return div;
