@@ -14,12 +14,22 @@ export function renderRegions(region) {
     return div;
 }
 
+export function renderRegionName(region) {
+    const div = document.createElement('div');
+    div.classList.add(`${region.name}`);
+    const h1 = document.createElement('h1');
+    h1.textContent = region.name;
+
+    div.append(h1);
+    return div;
+}
+
 export function renderTacoShops(shops) {
     const div = document.createElement('div'); 
     div.classList.add('shops');
 
     const a = document.createElement('a');
-    a.href = `./shops-info/?id=${shops.id}`;
+    a.href = `../shop-info/?id=${shops.id}`;
 
     const h1 = document.createElement('h1');
     h1.textContent = shops.name;
@@ -31,8 +41,9 @@ export function renderTacoShops(shops) {
     h2.textContent = `${shops.rating} 🌮`;
 
     div.append(h1, img, h2);
+    a.append(div);
 
-    return div;
+    return a;
 } 
 
 export function renderReviews(user_review) {
@@ -76,3 +87,4 @@ export function renderShopInfo(shop_info) {
     
     return div;
 }
+

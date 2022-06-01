@@ -1,5 +1,5 @@
-import { logout, getTacoShops } from '../fetch-utils.js';
-import { renderTacoShops } from '../render-utils.js';
+import { logout, getTacoShops, getRegionName } from '../fetch-utils.js';
+import { renderTacoShops, renderRegionName } from '../render-utils.js';
 
 // checkAuth();
 
@@ -9,7 +9,7 @@ const homeButton = document.getElementById('home');
 
 communityBoardButton.addEventListener('click', () => {
     // checkAuth();
-    window.location.href = './community-board';
+    window.location.href = '../community-board';
 });
 
 logoutButton.addEventListener('click', () => {
@@ -19,16 +19,32 @@ homeButton.addEventListener('click', () => {
     window.location.href = '/';
 });
 
+async function displayRegionName() {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const regionName = await getRegionName(id);
+
+    const section = document.getElementById('region');
+    section.textContent = '';
+
+    for (let name of regionName) {
+        const regionEl = renderRegionName(name);
+        section.append(regionEl);
+    }
+}
+displayRegionName();
+
 async function displayTacoShops() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     const shopsList = await getTacoShops(id);
 
-    const main = document.querySelector('main');
-    main.textContent = '';
+    const div = document.getElementById('shops');
+    div.textContent = '';
+
     for (let shops of shopsList) {
         const shopsEl = renderTacoShops(shops);
-        main.append(shopsEl);
+        div.append(shopsEl);
     }
 }
 displayTacoShops();
