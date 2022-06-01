@@ -125,3 +125,12 @@ second review to the right of the container */
     align-items: center;
     width: 75%;
 }
+
+.review:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.review:hover::after {
+    content: '❌';
+}
