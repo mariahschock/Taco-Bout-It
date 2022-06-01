@@ -1,6 +1,6 @@
 import { logout, home, addReview, getReviews, checkAuth, } from '../fetch-utils.js';
 import { renderReviews, } from '../render-utils.js';
-checkAuth();
+//checkAuth();
 const logoutButton = document.getElementById('logout');
 logoutButton.addEventListener('click', () => {
     logout();
@@ -41,4 +41,5 @@ async function displayReviews() {
     }
 }
 displayReviews();
-checkAuth();
+//checkAuth();
+//
