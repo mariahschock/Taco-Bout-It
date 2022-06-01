@@ -36,6 +36,12 @@ export async function logout() {
 
     return (window.location.href = '../');
 }
+export async function home() {
+    return (window.location.href = '../');
+}
+export async function communityBoard() {
+    return (window.location.href = '../community-board');
+}
 
 
 export async function getRegions() {
@@ -48,9 +54,13 @@ export async function getRegions() {
     }
 }
 
-export async function getTacoShops(id) {
-    const response = await client.from('Shop_info').select('*').match({ region_id: id });
-    console.log(response);
+export async function getShops(id) {
+    const response = await client.from('Shop_info').select('*').match({ id }).single();
+    return response.data;
+}
+
+export async function addReview(review) {
+    const response = await client.from('user_review').insert(review);
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -58,6 +68,15 @@ export async function getTacoShops(id) {
     }
 }
 
+export async function getReviews(id) {
+    const response = await client.from('user_review').select('*').match({
+        shop_id: id });
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
 // function checkError({ data, error }) {
 //     return error ? console.error(error) : data;
 // }
