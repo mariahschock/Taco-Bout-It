@@ -1,4 +1,4 @@
-import { logout, home, addReview, getReviews, getShopInfo, getUser } from '../fetch-utils.js';
+import { logout, home, addReview, getReviews, getShopInfo, } from '../fetch-utils.js';
 import { renderReviews, renderShopInfo } from '../render-utils.js';
 //checkAuth();
 
