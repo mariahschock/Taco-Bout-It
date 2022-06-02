@@ -1,5 +1,14 @@
 /* Header Styling */
 
+body {
+    background-image: url(../assets/TacoliciousTable.jpg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   opacity: 0.9;
+}
 
 header {
     height: 60px;
@@ -90,7 +99,7 @@ section {
     background-repeat: no-repeat;  
     border: 2px solid;
     margin: 20px;
-    
+    border-radius: 50px;
 }
 
 .Northwest {

@@ -31,9 +31,6 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
-<<<<<<< HEAD
-    justify-content: center;
-=======
     
 }
 button#home {
@@ -54,7 +51,6 @@ button#community-board {
     display: flex;
     justify-content: center;
     align-items: center;
->>>>>>> f4ba6135f5cf5c26678c26929f190bf44d6045a1
 }
 
  /* Body Styles start */
