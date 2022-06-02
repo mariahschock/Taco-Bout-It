@@ -1,6 +1,11 @@
 /* Header Styling */
-
-
+body {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+}
 header {
     height: 60px;
     display: flex;
