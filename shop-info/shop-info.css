@@ -1,5 +1,11 @@
 /* Header Styles */
-
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+}
 
 header {
     height: 75px;
@@ -13,10 +19,25 @@ header {
     float: left;
 }
 
+
+.back {
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    background-color:rgb(232, 216, 167);
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
 .left button {
     height: 20px;
     justify-content: center;
 }
+
+
 
 .right {
     width: 50vw;
@@ -28,7 +49,11 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+
+    
+
     justify-content: center;  
+
 }
 
 button#home {
@@ -162,17 +187,20 @@ h4 {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 3px solid black;
+    border: 3px solid rgb(255, 255, 255);
     column-gap: 20px;
     padding: 10px;
-    
+    border-radius: 25px;
     margin-right: 50px;
+    background-image: url(..//assets/TacoliciousTable.jpg);
+    background-size: cover;
 }
 
 /* Set up alternating CSS Rules to anchor every 
 second review to the right of the container */
 
 .review {
+    padding-top: 40pc;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
