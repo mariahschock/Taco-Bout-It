@@ -23,14 +23,19 @@
         </div>
     </main>
     <footer>
-        <div class="bottom">
+        <div class="dropdown">
             
             <form id="postItForm">
-                                <label for="title">
-                                    <div>Title</div>
-                                    <input type="text" name="new_post" id="new_post" height="150px" width="200px">
-                                    <input type="text" name="contact" id="contact">
-                                </label>
+                
+                <label for="new-postInfo">New Post Info
+
+                <input type="text" name="new_post" id="new_post" height="150px" width="200px">
+              </label> 
+              <label for="contact">Contact
+
+                  <input type="text" name="contact" id="contact">
+              </label>
+                                
 
                                 <button id="tacoBoutIt">Taco 'Bout It</button>
                             </form>
@@ -38,6 +43,7 @@
             </div>
              
         </div>
+        <button id="create">Create Post</button>
     </footer>
     <script type="module" src="./community-board.js"></script>
 </body>

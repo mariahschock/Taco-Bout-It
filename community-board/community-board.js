@@ -1,3 +1,4 @@
+
 import { logout, home, checkAuth, fetchPosts, createPost } from '../fetch-utils.js';
 import { renderPosts } from '../render-utils.js';
 
@@ -38,7 +39,16 @@ postItForm.addEventListener('submit', async (e) => {
     const res = await createPost(newPost);
     console.log(res);
     loadData();
-    // (newPost);
-    // (res);
+ 
     
+});
+
+const createButton = document.getElementById('create');
+createButton.addEventListener('click', () => {
+    const displayForm = document.querySelector('.dropdown');
+    if (displayForm.style.display === 'none') {
+        displayForm.style.display = 'block';
+    } else {
+        displayForm.style.display = 'none';
+    }
 });

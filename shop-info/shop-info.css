@@ -1,3 +1,6 @@
+/* Header Styles */
+
+
 header {
     height: 60px;
     display: flex;
@@ -67,7 +70,6 @@ main {
 
 .shop-info a {
     color: black;
-
 }
 
 .shop-info img {
@@ -122,4 +124,13 @@ second review to the right of the container */
     border: 2px solid black;
     align-items: center;
     width: 75%;
+}
+
+.review:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.review:hover::after {
+    content: '❌';
 }

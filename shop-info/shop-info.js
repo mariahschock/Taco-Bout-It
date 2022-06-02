@@ -1,27 +1,35 @@
-import { logout, home, addReview, getReviews, getShopInfo, } from '../fetch-utils.js';
+import { logout, home, addReview, getReviews, getShopInfo, checkAuth, deleteReview } from '../fetch-utils.js';
 import { renderReviews, renderShopInfo } from '../render-utils.js';
-//checkAuth();
-
-const reviewsContainer = document.querySelector('.reviews-container');
 
 
 const logoutButton = document.getElementById('logout');
+const homeButton = document.getElementById('home');
+const boardButton = document.getElementById('community-board');
+
+const reviewsContainer = document.querySelector('.reviews-container');
+
+checkAuth();
+
+// Auth Functionality
 logoutButton.addEventListener('click', () => {
     logout();
     window.location.href = '/';
 });
-const homeButton = document.getElementById('home');
+
+// Button to redirect user to the home page
 homeButton.addEventListener('click', () => {
     home();
     window.location.href = '/';
 });
-const boardButton = document.getElementById('community-board');
+
+// Button to redirect user to the community board page
 boardButton.addEventListener('click', () => {
     window.location.href = '../community-board';
-    console.log(boardButton);
 });
 
-
+// Function should allow auth users to create a new review
+// On submit, new review should display on the right side
+// of the page
 const shopForm = document.getElementById('shopReview');
 shopForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -33,12 +41,16 @@ shopForm.addEventListener('submit', async (e) => {
         rating: form.get('ratings'),
         shop_id: id,
     });
+<<<<<<< HEAD
     // Can't get form reset to work?//
+=======
+    reviewsContainer.textContent = '';
+>>>>>>> be3b310505aab5c9a5edee7940c80f47e93f6e3e
     displayReviews();
     shopForm.reset();
-    reviewsContainer.textContent = '';
 });
 
+// Displays all reviews for the shop being currently viewed
 async function displayReviews() {
     const parameters = new URLSearchParams(window.location.search);
     const id = parameters.get('id');
@@ -47,11 +59,17 @@ async function displayReviews() {
     reviewsContainer.textContent = '';
     for (let review of reviews) {
         const reviewDiv = renderReviews(review);
+        reviewDiv.addEventListener('click', async () => {
+            await deleteReview(review.id);
+            await displayReviews();
+        });
         reviewsContainer.append(reviewDiv);
     }
 }
 displayReviews();
 
+
+// Displays information of the shop being viewed by database ID
 async function displayShopInfo() {
     const parameters = new URLSearchParams(window.location.search);
     const id = parameters.get('id');
