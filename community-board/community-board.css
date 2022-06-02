@@ -1,3 +1,13 @@
+body {
+    background-image: url(..//assets/tacopartypreview.png);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   opacity: 0.9;
+   background-attachment: fixed;
+}
 header {
     height: 60px;
     display: flex;

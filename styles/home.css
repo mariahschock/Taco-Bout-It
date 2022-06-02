@@ -1,13 +1,14 @@
 /* Header Styling */
 
 body {
-    background-image: url(../assets/TacoliciousTable.jpg);
+    background-image: url(../assets/AdobeStock_293514302_Preview.jpeg);
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
    opacity: 0.9;
+   background-attachment: fixed;
 }
 
 header {
