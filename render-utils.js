@@ -63,6 +63,7 @@ export function renderReviews(user_review) {
 
 export function renderShopInfo(shop_info) {
     const div = document.createElement('div');
+    div.classList.add('shop');
     
     const h2 = document.createElement('h2');
     h2.textContent = shop_info.name;
@@ -70,20 +71,20 @@ export function renderShopInfo(shop_info) {
     const img = document.createElement('img');
     img.src = `../assets/${shop_info.image}.jpg`;
 
-    const addressP = document.createElement('p');
-    addressP.textContent = shop_info.address;
+    const addressh3 = document.createElement('h3');
+    addressh3.textContent = shop_info.address;
 
-    const phoneP = document.createElement('p');
-    phoneP.textContent = shop_info.phone;
+    const phoneh3 = document.createElement('h3');
+    phoneh3.textContent = shop_info.phone;
 
     const menuA = document.createElement('a');
     menuA.href = `${shop_info.menu}`;
-    menuA.textContent = shop_info.name;
+    menuA.textContent = `${shop_info.name} menu`;
 
     const aboutP = document.createElement('p');
     aboutP.textContent = shop_info.about;
 
-    div.append(h2, img, addressP, phoneP, menuA, aboutP);
+    div.append(h2, img, addressh3, phoneh3, menuA, aboutP);
     
     return div;
 }
