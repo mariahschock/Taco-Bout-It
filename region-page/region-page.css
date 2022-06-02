@@ -10,11 +10,6 @@ header {
     float: left;
 }
 
-/* .left button {
-    height: 20px;
-
-} */
-
 .right {
     width: 50vw;
     display: flex;
@@ -38,7 +33,6 @@ div#shops {
     flex-wrap: wrap;
     justify-content: center;
 }
-
 
 img {
     width: 250px;

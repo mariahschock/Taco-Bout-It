@@ -2,7 +2,7 @@
 
 
 header {
-    height: 60px;
+    height: 75px;
     display: flex;
     flex-direction: row;
 }
@@ -13,11 +13,14 @@ header {
     float: left;
 }
 
+<<<<<<< HEAD
 .left button {
     height: 20px;
     justify-content: center;
 }
 
+=======
+>>>>>>> f4ba6135f5cf5c26678c26929f190bf44d6045a1
 .right {
     width: 50vw;
     display: flex;
@@ -28,9 +31,31 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+<<<<<<< HEAD
+    justify-content: center;
+=======
+    
+}
+button#home {
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
     justify-content: center;
 }
-
+button#logout {
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+    justify-content: center;
+}
+button#community-board {
+    height: 40px;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+>>>>>>> f4ba6135f5cf5c26678c26929f190bf44d6045a1
+}
 
  /* Body Styles start */
 
@@ -46,7 +71,16 @@ main {
     position: relative;
     flex-direction: row;
 }
-
+img {
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    border: solid 1px;
+    padding: 10px;
+    
+}
 
 /* Left Side of Shop-Info Styling */
     /* Shop Info */
@@ -55,6 +89,7 @@ main {
     height: 100%;
     display: flex;
     flex-direction: column;
+    color: rgba(255, 255, 255, 0.794);
 }
 
 .shop-info {
@@ -66,18 +101,38 @@ main {
 .shop-info > * {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;   
 }
 
 .shop-info a {
     color: black;
+    background-color: rgba(255, 255, 255, 0.794);
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid;
 }
-
-.shop-info img {
-    width: 50%;
+a:hover {
+    opacity: 0.55;
 }
-
-/* Add Review Form */
+h2 {
+    font-size: 2rem;
+    color: white;
+}
+h3 {
+    font-size: 1.8rem;
+    color: white;
+    background-color: rgb(131, 86, 30, 0.743);
+}
+p {
+    font-size: 1.3rem;
+    text-align: center;
+}
+h4 {
+    font-size: 1.3rem;
+    text-align: center;
+    background-color: rgb(131, 86, 30, 0.743);
+}
 
 .reviews-form {
     display: flex;
@@ -94,7 +149,7 @@ main {
 }
 
 .reviews-form input {
-    height: 150px;
+    height: 100px;
     width: 300px;
 }
 
@@ -114,6 +169,8 @@ main {
     border: 3px solid black;
     column-gap: 20px;
     padding: 10px;
+    
+    margin-right: 50px;
 }
 
 /* Set up alternating CSS Rules to anchor every 
@@ -122,16 +179,28 @@ second review to the right of the container */
 .review {
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
+    border: 1px solid black;
     align-items: center;
     width: 75%;
+    margin-bottom: 30px;
+    background-color: rgba(255, 255, 255, 0.80);
+    padding: 30px;
+    border-radius: 5px;
 }
 
 .review:hover {
-    background-color: #ddd;
+    background-color: antiquewhite;
     cursor: pointer;
 }
 
 .review:hover::after {
     content: '❌';
+}
+
+body {
+    background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

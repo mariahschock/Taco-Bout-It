@@ -10,6 +10,41 @@
     <title>Taco 'Bout It!</title>
 </head>
 <body>
+    <header>
+        <div class="left">
+            <button id=home>Home</button>
+        </div>
+        <div class="right">
+            <button id="logout">Logout</button>
+        </div>
+    </header>   
+    <main>
+        <div id="community-board">
+        </div>
+    </main>
+    <footer>
+        <div class="dropdown">
+            
+            <form id="postItForm">
+                
+                <label for="new-postInfo">New Post Info
+
+                <input type="text" name="new_post" id="new_post" height="150px" width="200px">
+              </label> 
+              <label for="contact">Contact
+
+                  <input type="text" name="contact" id="contact">
+              </label>
+                                
+
+                                <button id="tacoBoutIt">Taco 'Bout It</button>
+                            </form>
+                        
+            </div>
+             
+        </div>
+        <button id="create">Create Post</button>
+    </footer>
     <script type="module" src="./community-board.js"></script>
 </body>
 </html>
