@@ -8,6 +8,7 @@ const logoutButton = document.getElementById('logout');
 const homeButton = document.getElementById('home');
 const postList = document.getElementById('community-board');
 
+
 logoutButton.addEventListener('click', () => {
     logout();
     window.location.href = '/';
@@ -39,6 +40,7 @@ postItForm.addEventListener('submit', async (e) => {
     const res = await createPost(newPost);
     console.log(res);
     loadData();
+    location.replace('/community-board');
     // (newPost);
     // (res);
     
@@ -52,4 +54,5 @@ createButton.addEventListener('click', () => {
     } else {
         displayForm.style.display = 'block';
     }
+    
 });

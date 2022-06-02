@@ -173,6 +173,7 @@ h4 {
 second review to the right of the container */
 
 .review {
+    padding-top: 40pc;
     display: flex;
     flex-direction: column;
     border: 1px solid black;

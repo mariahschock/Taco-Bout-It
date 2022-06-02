@@ -102,6 +102,8 @@ section {
     background-repeat: no-repeat;  
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
     margin: 20px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
+
     
 }
 
