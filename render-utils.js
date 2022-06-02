@@ -64,12 +64,15 @@ export function renderReviews(user_review) {
 export function renderShopInfo(shop_info) {
     const div = document.createElement('div');
     div.classList.add('shop');
-    
+
     const h2 = document.createElement('h2');
     h2.textContent = shop_info.name;
 
     const img = document.createElement('img');
     img.src = `../assets/${shop_info.image}.jpg`;
+
+    const abouth4 = document.createElement('h4');
+    abouth4.textContent = shop_info.about;
 
     const addressh3 = document.createElement('h3');
     addressh3.textContent = shop_info.address;
@@ -81,10 +84,9 @@ export function renderShopInfo(shop_info) {
     menuA.href = `${shop_info.menu}`;
     menuA.textContent = `${shop_info.name} menu`;
 
-    const aboutP = document.createElement('p');
-    aboutP.textContent = shop_info.about;
+    
 
-    div.append(h2, img, addressh3, phoneh3, menuA, aboutP);
+    div.append(h2, img, abouth4, addressh3, phoneh3, menuA,);
     
     return div;
 }
