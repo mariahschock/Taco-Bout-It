@@ -33,7 +33,7 @@ shopForm.addEventListener('submit', async (e) => {
         rating: form.get('ratings'),
         shop_id: id,
     });
-    // Can't get form reset to work?
+    // Can't get form reset to work?//
     displayReviews();
     shopForm.reset();
     reviewsContainer.textContent = '';
