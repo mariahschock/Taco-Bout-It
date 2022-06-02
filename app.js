@@ -18,7 +18,13 @@ const logoutButton = document.getElementById('logout');
 // Buttons
 communityBoardButton.addEventListener('click', () => {
     checkAuth();
-    window.location.href = './community-board';
+    const user = getUser();
+    if (user) {
+        location.assign('./community-board');
+    } else {
+        alert('Please sign in to view community board :)');
+    }
+    // window.location.href = './community-board';
 });
 
 logoutButton.addEventListener('click', () => {
