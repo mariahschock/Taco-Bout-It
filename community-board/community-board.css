@@ -1,7 +1,9 @@
-header {
-    height: 75px;
-    display: flex;
-    flex-direction: row;
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
 }
 
 .left {
