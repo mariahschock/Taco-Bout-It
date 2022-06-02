@@ -1,5 +1,11 @@
 /* Header Styles */
-
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+}
 
 header {
     height: 75px;
@@ -17,7 +23,10 @@ header {
     flex-direction: column;
     padding: 15%;
     background-color:rgb(232, 216, 167);
-    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 3px;
+    cursor: pointer;
 }
 .right {
     width: 50vw;
