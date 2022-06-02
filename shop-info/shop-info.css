@@ -13,6 +13,14 @@ header {
     float: left;
 }
 
+<<<<<<< HEAD
+.left button {
+    height: 20px;
+    justify-content: center;
+}
+
+=======
+>>>>>>> f4ba6135f5cf5c26678c26929f190bf44d6045a1
 .right {
     width: 50vw;
     display: flex;
@@ -23,6 +31,9 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+<<<<<<< HEAD
+    justify-content: center;
+=======
     
 }
 button#home {
@@ -43,6 +54,7 @@ button#community-board {
     display: flex;
     justify-content: center;
     align-items: center;
+>>>>>>> f4ba6135f5cf5c26678c26929f190bf44d6045a1
 }
 
  /* Body Styles start */
@@ -174,8 +186,15 @@ second review to the right of the container */
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
     border-radius: 5px;
-    
-    
+}
+
+.review:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.review:hover::after {
+    content: '❌';
 }
 
 body {
