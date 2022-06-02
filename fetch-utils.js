@@ -106,7 +106,7 @@ export async function addReview(review) {
 // Deletes reviews from the page
 export async function deleteReview(id) {
     const response = await client.from('user_review').delete().eq('id', id);
-if (response.error) {
+    if (response.error) {
         console.error(response.error.message);
     } else {
         return response.data;
