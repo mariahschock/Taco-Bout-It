@@ -9,14 +9,9 @@ export function getUser() {
 }
 
 export function checkAuth() {
-    // const user = getUser();
-    // if (user) {
-    //     location.assign('/community-board');
-    // } else {
-    //     alert('Please sign in to view community board :)');
-    // }
+    const user = getUser();
 
-    // if (!user) location.replace('../');
+    if (!user) location.replace('../');
 }
 
 // export function redirectIfLoggedIn() {

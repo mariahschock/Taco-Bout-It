@@ -24,7 +24,6 @@ communityBoardButton.addEventListener('click', () => {
     } else {
         alert('Please sign in to view community board :)');
     }
-    // window.location.href = './community-board';
 });
 
 logoutButton.addEventListener('click', () => {
