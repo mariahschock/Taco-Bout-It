@@ -59,6 +59,8 @@ export async function getRegionName(id) {
     console.log(response);
     if (response.error) {
         console.error(response.error.message);
+        alert('Please sign in :)');
+
     } else {
         return response.data;
     }
@@ -68,7 +70,6 @@ export async function getTacoShops(id) {
     const response = await client.from('Shop_info').select('*').match({ region_id: id });
     console.log(response);
     if (response.error) {
-        alert('Please sign in to view taco shops :)');
         console.error(response.error.message);
     } else {
         return response.data;
