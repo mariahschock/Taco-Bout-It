@@ -18,6 +18,7 @@ header {
     display: flex;
     float: left;
 }
+
 .back {
     display: flex;
     flex-direction: column;
@@ -28,6 +29,14 @@ header {
     margin-top: 3px;
     cursor: pointer;
 }
+
+
+.left button {
+    height: 20px;
+    justify-content: center;
+}
+
+
 .right {
     width: 50vw;
     display: flex;
@@ -38,8 +47,9 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
-    
+    justify-content: center;  
 }
+
 button#home {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
@@ -182,6 +192,7 @@ h4 {
 second review to the right of the container */
 
 .review {
+    padding-top: 40pc;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -191,6 +202,16 @@ second review to the right of the container */
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
     border-radius: 5px;    
+    border-radius: 5px;
+}
+
+.review:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.review:hover::after {
+    content: '❌';
 }
 
 body {

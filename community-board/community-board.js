@@ -8,6 +8,7 @@ const logoutButton = document.getElementById('logout');
 const homeButton = document.getElementById('home');
 const postList = document.getElementById('community-board');
 
+
 logoutButton.addEventListener('click', () => {
     logout();
     window.location.href = '/';
@@ -39,6 +40,7 @@ postItForm.addEventListener('submit', async (e) => {
     const res = await createPost(newPost);
     console.log(res);
     loadData();
+    location.replace('/community-board');
     // (newPost);
     // (res);
     
@@ -47,9 +49,10 @@ postItForm.addEventListener('submit', async (e) => {
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {
     const displayForm = document.querySelector('.dropdown');
-    if (displayForm.style.display === 'none') {
-        displayForm.style.display = 'block';
-    } else {
+    if (displayForm.style.display === 'block') {
         displayForm.style.display = 'none';
+    } else {
+        displayForm.style.display = 'block';
     }
+    
 });
