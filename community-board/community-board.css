@@ -15,9 +15,6 @@ header {
     width: 100px;
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
-    
-
-
 }
 
 .right {
@@ -119,8 +116,6 @@ form {
     align-items: flex-start;
     padding: 10px;
 }
-
-
 
 #create {
     z-index: 20;

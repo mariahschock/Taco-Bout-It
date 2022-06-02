@@ -1,5 +1,11 @@
 /* Header Styles */
-
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+}
 
 header {
     height: 75px;
@@ -13,10 +19,25 @@ header {
     float: left;
 }
 
+
+.back {
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    background-color:rgb(232, 216, 167);
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
 .left button {
     height: 20px;
     justify-content: center;
 }
+
+
 
 .right {
     width: 50vw;
@@ -28,7 +49,11 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+
+    
+
     justify-content: center;  
+
 }
 
 button#home {
@@ -160,7 +185,8 @@ textarea {
     align-items: center;
     height: 50%;
     padding: 10px;
-    bottom: 200px
+    bottom: 200px;
+    
 }
 
 .reviews-form form {
@@ -187,12 +213,14 @@ textarea {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 3px solid black;
+    border: 3px solid;
     column-gap: 20px;
     padding: 10px;
     margin-right: 50px;
     background-color: rgba(52, 50, 47, 0.416);
     margin: 30px;
+    height: 975px;
+    overflow-y: auto;
 }
 
 /* Set up alternating CSS Rules to anchor every 
@@ -209,6 +237,17 @@ second review to the right of the container */
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
     border-radius: 5px;    
+    border-radius: 5px;
+}
+
+.review:hover {
+    background-color: rgba(255, 255, 255, 0.166);
+    cursor: pointer;
+}
+
+.review:hover::after {
+    content: '❌ DELETE REVIEW';
+    
 }
 
 body {

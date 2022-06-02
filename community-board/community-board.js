@@ -1,5 +1,5 @@
 
-import { logout, home, checkAuth, fetchPosts, createPost } from '../fetch-utils.js';
+import { logout, home, checkAuth, fetchPosts, createPost, deletePost } from '../fetch-utils.js';
 import { renderPosts } from '../render-utils.js';
 
 checkAuth();
@@ -24,6 +24,10 @@ async function loadData() {
     const posts = await fetchPosts();
     for (let post of posts) {
         const postDiv = renderPosts(post);
+        postDiv.addEventListener('click', async () => {
+            await deletePost(post.id);
+            await loadData();
+        });
         postList.append(postDiv);
     }
 }
@@ -38,13 +42,16 @@ postItForm.addEventListener('submit', async (e) => {
         contact: data.get('contact'),
     };
     const res = await createPost(newPost);
+
     console.log(res);
     loadData();
     location.replace('/community-board');
     // (newPost);
     // (res);
+
     
 });
+loadData();
 
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {
@@ -54,5 +61,7 @@ createButton.addEventListener('click', () => {
     } else {
         displayForm.style.display = 'block';
     }
-    
+
 });
+
+

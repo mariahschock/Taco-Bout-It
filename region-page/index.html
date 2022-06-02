@@ -1,38 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        </style>
+        <link rel="stylesheet" href="./region-page.css" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./region-page.css">
-  
-    <title>Region Page</title>
-</head>
+        <title>Region Page</title>
+    </head>
 
-<body>
-    <header>
-        <div class="left">
-            <button id="community-board">Let's Taco 'Bout It!</button>
-        </div>
-        <section id="region"></section>
-        <div class="right">
-            <button id=home>Home</button>
-            <button id="logout">Logout</button>
-            
-        </div>
-    </header>    
-    <main>
-        <section class="style">
-        
-         <div id="shops"></div>
-        </section>
-    </main>
-    
+    <body>
+        <header>
+            <div class="left">
+                <button id="community-board">Let's Taco 'Bout It!</button>
+            </div>
+            <section id="region"></section>
+            <div class="right">
+                <button id="home">Home</button>
+                <button id="logout">Logout</button>
+            </div>
+        </header>
+        <main>
+            <section class="style">
+                <div id="shops"></div>
+            </section>
+        </main>
+       
 
-    <script type="module" src="./region-page.js"></script>
-</body>
-
+        <script type="module" src="./region-page.js"></script>
+    </body>
 </html>

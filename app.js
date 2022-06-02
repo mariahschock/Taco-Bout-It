@@ -1,4 +1,4 @@
-import { signInUser, signupUser } from './fetch-utils.js';
+import { signInUser, signupUser, getUser } from './fetch-utils.js';
 import { checkAuth, getRegions, logout } from './fetch-utils.js';
 import { renderRegions } from './render-utils.js';
 
@@ -18,14 +18,21 @@ const logoutButton = document.getElementById('logout');
 // Buttons
 communityBoardButton.addEventListener('click', () => {
     checkAuth();
-    window.location.href = './community-board';
+    const user = getUser();
+    if (user) {
+        location.assign('./community-board');
+    } else {
+        alert('Please sign in to view community board :)');
+    }
 });
 
 logoutButton.addEventListener('click', () => {
     logout();
 });
 
-// Click listener to pop out the authentication forms
+
+// Sign-Up and Login Form
+
 authenticationButton.addEventListener('click', () => {
     console.log('clicking');
     const displayForm = document.querySelector('.dropdown');  
@@ -36,7 +43,6 @@ authenticationButton.addEventListener('click', () => {
     }
 });
 
-// Sign-Up and Login Form
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signUpForm);
@@ -46,7 +52,6 @@ signUpForm.addEventListener('submit', async (event) => {
     }   
     
 });
-
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signInForm);
@@ -59,13 +64,18 @@ signInForm.addEventListener('submit', async (event) => {
     checkAuth();
     
 });
-
 async function displayRegions() {
     section.textContent = '';
     const regions = await getRegions();
     for (let region of regions) {
         const regionDiv = renderRegions(region);
         section.append(regionDiv);
+    }
+    const user = getUser();
+    if (user) {
+        authenticationButton.classList.add('hide');
+    } else {
+        logoutButton.classList.add('hide');
     }
 }
 
