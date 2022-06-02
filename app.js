@@ -25,15 +25,18 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-// Sign-Up and Login Form
+// Click listener to pop out the authentication forms
 authenticationButton.addEventListener('click', () => {
+    console.log('clicking');
     const displayForm = document.querySelector('.dropdown');  
-    if (displayForm.style.display === 'none') {
-        displayForm.style.display = 'block';
-    } else {
+    if (displayForm.style.display === 'block') {
         displayForm.style.display = 'none';
+    } else {
+        displayForm.style.display = 'block';
     }
 });
+
+// Sign-Up and Login Form
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signUpForm);
@@ -43,6 +46,7 @@ signUpForm.addEventListener('submit', async (event) => {
     }   
     
 });
+
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signInForm);
@@ -55,6 +59,7 @@ signInForm.addEventListener('submit', async (event) => {
     checkAuth();
     
 });
+
 async function displayRegions() {
     section.textContent = '';
     const regions = await getRegions();

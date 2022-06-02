@@ -13,6 +13,11 @@ header {
     float: left;
 }
 
+.left button {
+    height: 20px;
+    justify-content: center;
+}
+
 .right {
     width: 50vw;
     display: flex;
@@ -23,8 +28,9 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
-    
+    justify-content: center;  
 }
+
 button#home {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
@@ -78,6 +84,9 @@ img {
     display: flex;
     flex-direction: column;
     color: rgba(255, 255, 255, 0.794);
+    background-color: rgba(52, 50, 47, 0.417);
+    border: 3px solid black;
+    margin: 30px;
 }
 
 .shop-info {
@@ -94,11 +103,12 @@ img {
 
 .shop-info a {
     color: black;
-    background-color: rgba(255, 255, 255, 0.794);
+    background-color: rgb(131, 86, 30, 0.743);
     font-size: 1.5rem;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid;
+    margin-top: 20px;
 }
 a:hover {
     opacity: 0.55;
@@ -111,7 +121,9 @@ h2 {
 h3 {
     font-size: 1.8rem;
     color: white;
-    background-color: rgb(131, 86, 30, 0.743);
+    background-color: rgba(23, 22, 21, 0.74);
+    padding: 10px;
+    margin: 0px;
 }
 p {
     font-size: 1.3rem;
@@ -120,7 +132,26 @@ p {
 h4 {
     font-size: 1.3rem;
     text-align: center;
-    background-color: rgb(131, 86, 30, 0.743);
+    width: 550px;
+    
+}
+#select {
+    width: 150px;
+    height: 30px;  
+}
+#add-review {
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(232, 216, 167);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+
+}
+textarea {
+    margin-top: 20px;
 }
 
 .reviews-form {
@@ -159,8 +190,9 @@ h4 {
     border: 3px solid black;
     column-gap: 20px;
     padding: 10px;
-    
     margin-right: 50px;
+    background-color: rgba(52, 50, 47, 0.416);
+    margin: 30px;
 }
 
 /* Set up alternating CSS Rules to anchor every 
@@ -180,7 +212,7 @@ second review to the right of the container */
 }
 
 body {
-    background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
+    background-image: url(../assets/tacoshopinfobkgrnd.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

@@ -78,10 +78,12 @@ main {
     flex-direction: column;
     width: 450px;
     height: 350px;
-    border: 1px solid black;
+    border: 2px solid rgb(245, 91, 91);
     margin: 10px;
     border-radius: 10px;
     text-align: start;
+    /* box-shadow: rgba(245, 91, 91, 0.51) 0px 1px 2px, rgba(245, 91, 91, 0.386) 0px 2px 4px, rgba(245, 91, 91, 0.693) 0px 4px 8px, rgba(245, 91, 91, 0.329) 0px 8px 16px, rgba(245, 91, 91, 0.07) 0px 16px 32px, rgba(245, 91, 91, 0.177) 0px 32px 64px;  */
+
 }
 p {
     padding: 20px;
@@ -131,7 +133,7 @@ form {
 }
 
 body {
-    background-image: url(../assets/tacopartypreview.png);
+    background-image: url(../assets/communityboardbkgrnd.jpeg);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
