@@ -29,11 +29,12 @@ logoutButton.addEventListener('click', () => {
 // Sign-Up and Login Form
 
 authenticationButton.addEventListener('click', () => {
+    console.log('clicking');
     const displayForm = document.querySelector('.dropdown');  
-    if (displayForm.style.display === 'none') {
-        displayForm.style.display = 'block';
-    } else {
+    if (displayForm.style.display === 'block') {
         displayForm.style.display = 'none';
+    } else {
+        displayForm.style.display = 'block';
     }
 });
 

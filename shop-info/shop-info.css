@@ -181,9 +181,7 @@ second review to the right of the container */
     margin-bottom: 30px;
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
-<<<<<<< HEAD
     border-radius: 5px;    
-=======
     border-radius: 5px;
 }
 
@@ -194,7 +192,6 @@ second review to the right of the container */
 
 .review:hover::after {
     content: '❌';
->>>>>>> 7333a4ef984254f7eb258434bd2ba276b5e8abeb
 }
 
 body {
