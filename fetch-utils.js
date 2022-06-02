@@ -112,15 +112,46 @@ export async function deleteReview(id) {
     }
 }
 
+                // Community Board functions
+// Display Community Board Posts
 export async function fetchPosts() {
     const response = await client.from('Community_board').select('*');
-    console.log(response);
     return response.data;
 }
 
+// Create Community Board Posts
 export async function createPost(post) {
     const response = await client.from('Community_board').insert(post);
-    // return response.data;
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
+// Delete Community Board Posts
+export async function deletePost(id) {
+    const response = await client.from('Community_board').delete().eq('id', id);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
+// Add Participant-reply to Posts
+export async function createReply(participant) {
+    const response = await client.from('Participants').insert(participant);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
+// Delete Participant from Post
+export async function deleteReply(id) {
+    const response = await client.from('Participants').delete().eq(id);
     if (response.error) {
         console.error(response.error.message);
     } else {

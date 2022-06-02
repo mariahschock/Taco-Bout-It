@@ -1,3 +1,5 @@
+/* Header Styling */
+
 header {
     height: 60px;
     display: flex;
@@ -27,38 +29,32 @@ header {
     height: 20px;
     float: right;
 }
-footer {
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
-    margin-right: 500px;
-}
+
+/* Body Styling */
+
 #tacoBoutIt {
     width: 10vw;
     display: flex;
     float: right;
-   
-   
 }
+
 #community-board {
     background-color: coral;
     width: 100%;
     display: flex;
     flex-direction: row;
    justify-content: center;
-    
     flex-wrap: wrap;
     border-radius: 15px;
     margin: 10px;
 }
+
 main {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
+
 .community-post {
     display: flex;
     flex-direction: column;
@@ -69,12 +65,13 @@ main {
     padding: 25px;
     text-align: center;
 }
+
 #new_Post input {
     height: 150px;
     width: 200px;
 
 }
-
+        /* Styling for Create New Post */
 .dropdown {
     display: none;
     position: absolute;
@@ -93,12 +90,37 @@ form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
 }
 
 #create {
     z-index: 20;
 }
-
-
     
+        /* Styling for Add Message to Post */
+.hidden {
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 2px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
+}
+
+.pop-out-container {
+    width: fit-content;
+    display: flex;
+    align-self: right;
+}
+
+/* Footer Styling */
+
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-right: 500px;
+}

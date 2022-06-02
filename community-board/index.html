@@ -21,16 +21,28 @@
     <main>
         <div id="community-board">
         </div>
+
+        <!-- Temporary Form -->
+        <div class="hidden">
+            <form class="postReplyForm">
+                <label for="name">Name
+                    <input type="text" name="name">
+                </label>
+                <label for="content">
+                    <textarea name="content" placeholder="Type your message here">
+                    </textarea>
+                </label>
+                <button>Submit</button>
+            </form>
+        </div>
+
     </main>
     <footer>
-        <div class="dropdown">
-            
-            <form id="postItForm">
-                
+        <div class="dropdown">  
+            <form id="postItForm">                
                 <label for="new-postInfo">New Post Info
-
                 <input type="text" name="new_post" id="new_post" height="150px" width="200px">
-              </label> 
+                </label> 
               <label for="contact">Contact
 
                   <input type="text" name="contact" id="contact">
@@ -39,11 +51,12 @@
 
                                 <button id="tacoBoutIt">Taco 'Bout It</button>
                             </form>
+                            
+                        </div>
                         
-            </div>
-             
-        </div>
-        <button id="create">Create Post</button>
+                    </div>
+                    <button id="create">Create Post</button>
+                    
     </footer>
     <script type="module" src="./community-board.js"></script>
 </body>

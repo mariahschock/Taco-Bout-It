@@ -28,7 +28,11 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+<<<<<<< HEAD
     justify-content: center;  
+=======
+    
+>>>>>>> a64273ab41477ae0feb7a6d5a81e0796b39746df
 }
 
 button#home {
