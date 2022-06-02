@@ -13,6 +13,11 @@ header {
     float: left;
 }
 
+.left button {
+    height: 20px;
+    justify-content: center;
+}
+
 .right {
     width: 50vw;
     display: flex;
@@ -23,8 +28,9 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
-    
+    justify-content: center;  
 }
+
 button#home {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
@@ -175,7 +181,20 @@ second review to the right of the container */
     margin-bottom: 30px;
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
+<<<<<<< HEAD
     border-radius: 5px;    
+=======
+    border-radius: 5px;
+}
+
+.review:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
+
+.review:hover::after {
+    content: '❌';
+>>>>>>> 7333a4ef984254f7eb258434bd2ba276b5e8abeb
 }
 
 body {

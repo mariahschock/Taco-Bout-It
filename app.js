@@ -37,19 +37,6 @@ authenticationButton.addEventListener('click', () => {
     }
 });
 
-//     const user = getUser();
-
-//     if (user) {
-//         authenticationButton.textContent = 'Logout';
-//         authenticationButton.addEventListener('click', logout);
-//         authenticationButton.classList.remove('hide');
-//     } else {
-//         authenticationButton.textContent = 'Login';
-//         authenticationButton.addEventListener('click', checkAuth);
-//         authenticationButton.classList.remove('hide');
-//     }
-// });
-
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signUpForm);

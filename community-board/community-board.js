@@ -47,9 +47,9 @@ postItForm.addEventListener('submit', async (e) => {
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {
     const displayForm = document.querySelector('.dropdown');
-    if (displayForm.style.display === 'none') {
-        displayForm.style.display = 'block';
-    } else {
+    if (displayForm.style.display === 'block') {
         displayForm.style.display = 'none';
+    } else {
+        displayForm.style.display = 'block';
     }
 });
