@@ -91,3 +91,16 @@ export function renderShopInfo(shop_info) {
     return div;
 }
 
+export function renderPosts(post) {
+    const div = document.createElement('div');
+    div.classList.add('community-post');
+
+    const p = document.createElement('p');
+    p.textContent = post.new_post;
+
+    const p2 = document.createElement('p');
+    p2.textContent = post.contact;
+
+    div.append(p, p2);
+    return div;
+}

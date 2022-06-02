@@ -1,7 +1,7 @@
-import { logout, getTacoShops, getRegionName } from '../fetch-utils.js';
+import { logout, getTacoShops, getRegionName, checkAuth } from '../fetch-utils.js';
 import { renderTacoShops, renderRegionName } from '../render-utils.js';
 
-// checkAuth();
+checkAuth();
 
 const logoutButton = document.getElementById('logout');
 const communityBoardButton = document.getElementById('community-board');

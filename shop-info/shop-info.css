@@ -1,3 +1,6 @@
+/* Header Styles */
+
+
 header {
     height: 75px;
     display: flex;
@@ -174,12 +177,7 @@ second review to the right of the container */
     
     
 }
-.reviews-container:nth-child(odd) {
-    display: flex;
-    align-items: flex-end;
-    background-color: aqua;
-   
-}
+
 body {
     background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
     background-position: center;
