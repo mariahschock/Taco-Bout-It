@@ -12,7 +12,13 @@ header {
     display: flex;
     float: left;
 }
-
+.back {
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    background-color:rgb(232, 216, 167);
+    margin-bottom: 10px;
+}
 .right {
     width: 50vw;
     display: flex;
