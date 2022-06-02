@@ -1,14 +1,20 @@
+/* Universal Styling */
+
+
+button {
+    height: 40px;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+
 /* Header Styling */
 
-body {
-    background-image: url(../assets/TacoliciousTable.jpg);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   opacity: 0.9;
-}
 
 header {
     height: 60px;
@@ -20,11 +26,6 @@ header {
     width: 50vw;
     display: flex;
     float: left;
-}
-
-.left button {
-    height: 20px;
-
 }
 
 .right {
@@ -40,8 +41,13 @@ header {
     z-index: 20;
 }
 
+.hide {
+    display:none;
+}
 
 /* Sign-Up/Login Form Pop Out*/
+
+
 .dropdown {
     display: none;
     position: absolute;
@@ -75,6 +81,25 @@ header {
 
  /* Body Styles start */
 
+ body {
+    background-image: url(../assets/AdobeStock_293514302_Preview.jpeg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+}
+
+ a {
+    color: black;
+    background-color: rgba(245, 245, 245, 0.721);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
+}
 
 .title {
     display: flex;
@@ -97,9 +122,10 @@ section {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;  
-    border: 2px solid;
+    box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
     margin: 20px;
     border-radius: 50px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
 }
 
 .Northwest {

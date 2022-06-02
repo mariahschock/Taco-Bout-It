@@ -1,3 +1,13 @@
+/* Universal Styling */
+
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+}
+
 /* Header Styles */
 
 
@@ -18,6 +28,17 @@ header {
     justify-content: center;
 }
 
+.back {
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    background-color:rgb(232, 216, 167);
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
 .right {
     width: 50vw;
     display: flex;
@@ -28,11 +49,7 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
-<<<<<<< HEAD
     justify-content: center;  
-=======
-    
->>>>>>> a64273ab41477ae0feb7a6d5a81e0796b39746df
 }
 
 button#home {
@@ -40,11 +57,13 @@ button#home {
     background-color:rgb(232, 216, 167);
     justify-content: center;
 }
+
 button#logout {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
     justify-content: center;
 }
+
 button#community-board {
     height: 40px;
     border-radius: 5px;
@@ -57,11 +76,12 @@ button#community-board {
 
  /* Body Styles start */
 
-
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+ body {
+    background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 main {
@@ -69,6 +89,7 @@ main {
     position: relative;
     flex-direction: row;
 }
+
 img {
     width: 350px;
     height: 350px;
@@ -77,11 +98,18 @@ img {
     object-fit: cover;
     border: solid 1px;
     padding: 10px;
-    
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Left Side of Shop-Info Styling */
     /* Shop Info */
+
+
 .shop-section {
     width: 50%;
     height: 100%;
@@ -110,22 +138,28 @@ img {
     border-radius: 5px;
     border: 1px solid;
 }
+
 a:hover {
     opacity: 0.55;
 }
+
 h2 {
     font-size: 2rem;
     color: white;
+    text-shadow: 0 0 3px black;
 }
+
 h3 {
     font-size: 1.8rem;
     color: white;
     background-color: rgb(131, 86, 30, 0.743);
 }
+
 p {
     font-size: 1.3rem;
     text-align: center;
 }
+
 h4 {
     font-size: 1.3rem;
     text-align: center;
@@ -149,6 +183,7 @@ h4 {
 .reviews-form input {
     height: 100px;
     width: 300px;
+    text-align: start;
 }
 
 .reviews-form select, button {
@@ -157,24 +192,27 @@ h4 {
     margin-top: 3px;
 }
 
-
 /* Right Side of Shop-Info Styling */
+
 
 .reviews-container {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 3px solid black;
+    border: 3px solid rgb(255, 255, 255);
     column-gap: 20px;
     padding: 10px;
-    
+    border-radius: 25px;
     margin-right: 50px;
+    background-image: url(..//assets/TacoliciousTable.jpg);
+    background-size: cover;
 }
 
 /* Set up alternating CSS Rules to anchor every 
 second review to the right of the container */
 
 .review {
+    padding-top: 40pc;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -183,6 +221,7 @@ second review to the right of the container */
     margin-bottom: 30px;
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
+    border-radius: 5px;    
     border-radius: 5px;
 }
 
@@ -193,12 +232,4 @@ second review to the right of the container */
 
 .review:hover::after {
     content: '❌';
-}
-
-body {
-    background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }

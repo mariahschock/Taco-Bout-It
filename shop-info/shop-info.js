@@ -36,6 +36,7 @@ shopForm.addEventListener('submit', async (e) => {
     const parameters = new URLSearchParams(window.location.search);
     const id = parameters.get('id');
     const form = new FormData(shopForm);
+    console.log(form.get('ratings'));
     await addReview ({
         content: form.get('content'),
         rating: form.get('ratings'),

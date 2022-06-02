@@ -54,7 +54,12 @@ export function renderReviews(user_review) {
     p.textContent = `${user_review.content}`;
 
     const span = document.createElement('span');
+
+    console.log(user_review.rating);
+    span.textContent = `${user_review.rating}`;
+
     span.textContent = `${user_review.rating} 🌮`;
+
     
     div.append(p, span);
     

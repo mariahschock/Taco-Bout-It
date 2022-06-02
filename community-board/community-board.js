@@ -57,8 +57,13 @@ postItForm.addEventListener('submit', async (e) => {
         contact: data.get('contact'),
     };
     const res = await createPost(newPost);
-    return res.data;
-    
+
+    console.log(res);
+    loadData();
+    location.replace('/community-board');
+    // (newPost);
+    // (res);
+
     
 });
 loadData();
@@ -71,6 +76,7 @@ createButton.addEventListener('click', () => {
     } else {
         displayForm.style.display = 'block';
     }
+
 });
 
 displayReplyForm.forEach(item => {

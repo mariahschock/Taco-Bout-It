@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./shop-info.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-
-    <title>Shop Information</title>
-</head>
-<body>
-    <header>
-        <div class="left">
-            <button id="community-board">Let's Taco 'Bout It!</button>
-        </div>
-        <div class="right">
-            <button id="home">Home</button>
-            <button id="logout">Logout</button>
-        </div>
-    </header>
-    <main>
-        <!-- Left Side of Web Page -->
-        <div class="shop-section">
-            <div class="shop-info">
-                
-            </div>
-
-            <div class="reviews-form">
-                <form id="shopReview">
-                    <input type="text" name="content">
-                    <select name="ratings">
-                        <option value="1.0">1 🌮</option>
-                        <option value="2.0">2 🌮🌮</option>
-                        <option value="3.0">3 🌮🌮🌮</option>
-                        <option value="4.0">4 🌮🌮🌮🌮</option>
-                        <option value="5.0">5 🌮🌮🌮🌮🌮</option>
-                    </select>
-                    <button>Submit</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./shop-info.css" />
+        <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+        </style>
+        <title>Shop Information</title>
+    </head>
+    <body>
+        <header>
+            <div class="left">
+                <button id="community-board">Let's Taco 'Bout It!</button>
+                <form>
+                    <input class="back" type="button" value="Go back!" onclick="history.back()" />
                 </form>
             </div>
+            <div class="right">
+                <button id="home">Home</button>
+                <button id="logout">Logout</button>
+            </div>
+        </header>
+        <main>
+            <!-- Left Side of Web Page -->
+            <div class="shop-section">
+                <div class="shop-info"></div>
+
+                <div class="reviews-form">
+                    <form id="shopReview">
+                        <input type="text" name="content" />
+                        <select name="ratings">
+                            <option value="1.0 🌮">1 🌮</option>
+                            <option value="2.0 🌮🌮">2 🌮🌮</option>
+                            <option value="3.0 🌮🌮🌮">3 🌮🌮🌮</option>
+                            <option value="4.0 🌮🌮🌮🌮">4 🌮🌮🌮🌮</option>
+                            <option value="5.0 🌮🌮🌮🌮🌮">5 🌮🌮🌮🌮🌮</option>
+                        </select>
+                        <button>Submit</button>
+                    </form>
+                </div>
+            </div>
+
         </div>
         <!-- Right Side of Web Page -->
         <div class="reviews-container">
+            <h1>Reviews</h1>
             
         </div>     
     
@@ -49,3 +55,4 @@
     <script type="module" src="./shop-info.js"></script>    
 </body>
 </html>
+
