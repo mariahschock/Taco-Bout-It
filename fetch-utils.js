@@ -129,3 +129,14 @@ export async function createPost(post) {
         return response.data;
     }
 }
+// delete community post;
+export async function deletePost(id) {
+    const response = await client.from('Community_board').delete().eq('id', id);
+    // return response.data;
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+

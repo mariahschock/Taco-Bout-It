@@ -42,11 +42,12 @@ shopForm.addEventListener('submit', async (e) => {
         rating: form.get('ratings'),
         shop_id: id,
     });
+    
+    // Can't get form reset to work?//
     reviewsContainer.textContent = '';
     displayReviews();
     shopForm.reset();
 });
-
 // Displays all reviews for the shop being currently viewed
 async function displayReviews() {
     const parameters = new URLSearchParams(window.location.search);
