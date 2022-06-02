@@ -1,5 +1,11 @@
 /* Header Styles */
-
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+}
 
 header {
     height: 75px;
@@ -13,6 +19,26 @@ header {
     float: left;
 }
 
+
+.back {
+    display: flex;
+    flex-direction: column;
+    padding: 15%;
+    background-color:rgb(232, 216, 167);
+    border-radius: 5px;
+    margin-left: 8px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+.left button {
+    height: 20px;
+    justify-content: center;
+}
+
+
+
 .right {
     width: 50vw;
     display: flex;
@@ -23,8 +49,13 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
+
     
+
+    justify-content: center;  
+
 }
+
 button#home {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
@@ -106,6 +137,7 @@ a:hover {
 h2 {
     font-size: 2rem;
     color: white;
+    text-shadow: 0 0 3px black;
 }
 h3 {
     font-size: 1.8rem;
@@ -139,6 +171,7 @@ h4 {
 .reviews-form input {
     height: 100px;
     width: 300px;
+    text-align: start;
 }
 
 .reviews-form select, button {
@@ -167,6 +200,7 @@ h4 {
 second review to the right of the container */
 
 .review {
+    padding-top: 40pc;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
@@ -175,6 +209,7 @@ second review to the right of the container */
     margin-bottom: 30px;
     background-color: rgba(255, 255, 255, 0.80);
     padding: 30px;
+    border-radius: 5px;    
     border-radius: 5px;
 }
 

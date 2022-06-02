@@ -1,3 +1,4 @@
+
 body {
     background-image: url(..//assets/tacopartypreview.png);
     display: flex;
@@ -12,16 +13,30 @@ header {
     height: 60px;
     display: flex;
     flex-direction: row;
+
+* {
+    font-family: 'Roboto', sans-serif;
+    
+}
+button {
+    cursor: pointer;
+
 }
 
 .left {
     width: 50vw;
     display: flex;
     float: left;
+    
 }
 
 .left button {
-    height: 20px;
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+    
+
 
 }
 
@@ -34,9 +49,19 @@ header {
 }
 
 .right button {
-    height: 20px;
+    height: 30px;
+    width: 100px;
     float: right;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+
 }
+header {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+}
+
 footer {
     width: 100vw;
     position: fixed;
@@ -49,20 +74,16 @@ footer {
 #tacoBoutIt {
     width: 10vw;
     display: flex;
-    float: right;
-   
-   
+    float: right;   
 }
 #community-board {
-    background-color: coral;
     width: 100%;
     display: flex;
     flex-direction: row;
-   justify-content: center;
-    
+    justify-content: center;
     flex-wrap: wrap;
     border-radius: 15px;
-    margin: 10px;
+    margin-top: 300px;
 }
 main {
     display: flex;
@@ -70,45 +91,94 @@ main {
     width: 100%;
 }
 .community-post {
+    background-image: url(../assets/dt-taco-hungry.jpeg);
+    background-size: cover;
+    object-fit: contain;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 450px;
+    height: 350px;
     border: 1px solid black;
     margin: 10px;
     border-radius: 10px;
-    padding: 25px;
-    text-align: center;
+    text-align: start;
 }
-#new_Post input {
-    height: 150px;
+p {
+    padding: 20px;
+    font-size: 1.1rem;
     width: 200px;
-
+    margin-top: 25px;
+    
 }
+
 
 .dropdown {
     display: none;
     position: absolute;
     z-index: 10;
-    background-color: antiquewhite;
+    background-color: rgba(218, 151, 84, 0.942);
     bottom: 300px;
-    right: 200px;
+    right: 650px;
+    max-width: 100%;
+    max-height: auto;
     border-radius: 10px;
     padding: 20px;
-    border: solid 2px;
+    font-size: 1.3em;
     box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
+    box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+
 }
 
 form {
-    height: 300px;
+    height: 600px;
+    width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: flex-start;
+    padding: 10px;
 }
+
+
 
 #create {
     z-index: 20;
+    margin-right: 20px;
+    height: 50px;
+    background-color:rgb(232, 216, 167);
+    border-radius: 5px;
+    width: 150px;
+
 }
 
+body {
+    background-image: url(../assets/tacopartypreview.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#contact {
+    display: flex;
+    
+}
+textarea {
+    line-height: 20px;
+    padding: 10px;
+    font-size: 14px;
+    background-color:rgb(248, 248, 248);
+    color: rgba(0,0,0,.72);
+    margin-top: 10px;
+    border: 3px solid;   
+}
+button#tacoBoutIt {
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(232, 216, 167);
+    font-size: 1.2rem;
+    
+}
 
     

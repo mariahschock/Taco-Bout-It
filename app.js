@@ -1,4 +1,4 @@
-import { signInUser, signupUser } from './fetch-utils.js';
+import { signInUser, signupUser, getUser } from './fetch-utils.js';
 import { checkAuth, getRegions, logout } from './fetch-utils.js';
 import { renderRegions } from './render-utils.js';
 
@@ -18,22 +18,31 @@ const logoutButton = document.getElementById('logout');
 // Buttons
 communityBoardButton.addEventListener('click', () => {
     checkAuth();
-    window.location.href = './community-board';
+    const user = getUser();
+    if (user) {
+        location.assign('./community-board');
+    } else {
+        alert('Please sign in to view community board :)');
+    }
 });
 
 logoutButton.addEventListener('click', () => {
     logout();
 });
 
+
 // Sign-Up and Login Form
+
 authenticationButton.addEventListener('click', () => {
+    console.log('clicking');
     const displayForm = document.querySelector('.dropdown');  
-    if (displayForm.style.display === 'none') {
-        displayForm.style.display = 'block';
-    } else {
+    if (displayForm.style.display === 'block') {
         displayForm.style.display = 'none';
+    } else {
+        displayForm.style.display = 'block';
     }
 });
+
 signUpForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signUpForm);
@@ -61,6 +70,12 @@ async function displayRegions() {
     for (let region of regions) {
         const regionDiv = renderRegions(region);
         section.append(regionDiv);
+    }
+    const user = getUser();
+    if (user) {
+        authenticationButton.classList.add('hide');
+    } else {
+        logoutButton.classList.add('hide');
     }
 }
 

@@ -47,7 +47,6 @@ export async function communityBoard() {
 // Region-page Functions
 export async function getRegions() {
     const response = await client.from('Regions').select('*');
-    console.log(response);
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -60,6 +59,8 @@ export async function getRegionName(id) {
     console.log(response);
     if (response.error) {
         console.error(response.error.message);
+        alert('Please sign in :)');
+
     } else {
         return response.data;
     }
@@ -112,11 +113,13 @@ export async function deleteReview(id) {
         return response.data;
     }
 }
+
 export async function fetchPosts() {
     const response = await client.from('Community_board').select('*');
     console.log(response);
     return response.data;
 }
+
 export async function createPost(post) {
     const response = await client.from('Community_board').insert(post);
     // return response.data;
