@@ -59,8 +59,6 @@ export async function getRegionName(id) {
     console.log(response);
     if (response.error) {
         console.error(response.error.message);
-        alert('Please sign in :)');
-
     } else {
         return response.data;
     }
