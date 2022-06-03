@@ -97,24 +97,29 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 15px;
-    margin-top: 300px;
+    margin-top: 100px;
 }
 
     /* Styling for Create New Post */
     
 .dropdown {
     display: none;
-    position: relative;
-    z-index: 10;
+    position: fixed;
     background-color: rgba(218, 151, 84, 0.942);
-    top: 100px;
-    right: 37%;
-    max-width: 100%;
-    max-height: auto;
+    bottom: 50px;
+    right: 650px;
+    max-width: 400px;
+    max-height: 450px;
     border-radius: 10px;
     padding: 20px;
     font-size: 1.3em;
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.delete-button {
+    width: fit-content;
+    display: flex;
+    float: right;
 }
 
 form {

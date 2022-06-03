@@ -54,7 +54,6 @@ createNewPostForm.addEventListener('submit', async (e) => {
     return response.data;
 });
 
-
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {
     const displayForm = document.querySelector('.dropdown');
