@@ -3,7 +3,7 @@ const SUPABASE_KEY =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhaGhtamJrZXZ0cXZqeXJjaWFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTM2OTIyMDgsImV4cCI6MTk2OTI2ODIwOH0.D0GZv1xy0QcdmaM9dJr3FCobWoGH6RY4NQSZGvYM7Ek';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
+//yes
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
@@ -59,8 +59,6 @@ export async function getRegionName(id) {
     console.log(response);
     if (response.error) {
         console.error(response.error.message);
-        alert('Please sign in :)');
-
     } else {
         return response.data;
     }
@@ -70,6 +68,7 @@ export async function getTacoShops(id) {
     const response = await client.from('Shop_info').select('*').match({ region_id: id });
     console.log(response);
     if (response.error) {
+        alert('Please sign in to view taco shops :)');
         console.error(response.error.message);
     } else {
         return response.data;
@@ -114,25 +113,16 @@ export async function deleteReview(id) {
     }
 }
 
+                // Community Board functions
+// Display Community Board Posts
 export async function fetchPosts() {
     const response = await client.from('Community_board').select('*');
-    console.log(response);
     return response.data;
 }
 
+// Create Community Board Posts
 export async function createPost(post) {
     const response = await client.from('Community_board').insert(post);
-    // return response.data;
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
-    }
-}
-// delete community post;
-export async function deletePost(id) {
-    const response = await client.from('Community_board').delete().eq('id', id);
-    // return response.data;
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -140,3 +130,32 @@ export async function deletePost(id) {
     }
 }
 
+// Delete Community Board Posts
+export async function deletePost(id) {
+    const response = await client.from('Community_board').delete().eq('id', id);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
+// Add Participant-reply to Posts
+export async function createReply(participant) {
+    const response = await client.from('Participants').insert(participant);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}
+
+// Delete Participant from Post
+export async function deleteReply(id) {
+    const response = await client.from('Participants').delete().eq(id);
+    if (response.error) {
+        console.error(response.error.message);
+    } else {
+        return response.data;
+    }
+}

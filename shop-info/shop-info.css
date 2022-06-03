@@ -1,4 +1,5 @@
-/* Header Styles */
+/* Universal Styling */
+
 * {
     font-family: 'Roboto', sans-serif;
     
@@ -6,6 +7,9 @@
 button {
     cursor: pointer;
 }
+
+/* Header Styles */
+
 
 header {
     height: 75px;
@@ -19,6 +23,10 @@ header {
     float: left;
 }
 
+.left button {
+    height: 20px;
+    justify-content: center;
+}
 
 .back {
     display: flex;
@@ -31,14 +39,6 @@ header {
     cursor: pointer;
 }
 
-
-.left button {
-    height: 20px;
-    justify-content: center;
-}
-
-
-
 .right {
     width: 50vw;
     display: flex;
@@ -48,9 +48,10 @@ header {
 
 .right button {
     width: 100px;
-    /* margin-bottom: 10px; */
-    justify-content: center;  
 
+    margin-bottom: 10px;
+
+    justify-content: center;  
 }
 
 button#home {
@@ -61,6 +62,7 @@ button#home {
     height: 30px;
     align-items: center;
 }
+
 button#logout {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
@@ -69,6 +71,7 @@ button#logout {
     height: 30px;
     align-items: center;
 }
+
 button#community-board {
     height: 40px;
     border-radius: 5px;
@@ -81,11 +84,12 @@ button#community-board {
 
  /* Body Styles start */
 
-
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+ body {
+    background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 main {
@@ -93,6 +97,7 @@ main {
     position: relative;
     flex-direction: row;
 }
+
 img {
     width: 350px;
     height: 350px;
@@ -101,11 +106,18 @@ img {
     object-fit: cover;
     border: solid 1px;
     padding: 10px;
-    
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 /* Left Side of Shop-Info Styling */
     /* Shop Info */
+
+
 .shop-section {
     width: 50%;
     height: 100%;
@@ -138,14 +150,17 @@ img {
     border: 1px solid;
     margin-top: 20px;
 }
+
 a:hover {
     opacity: 0.55;
 }
+
 h2 {
     font-size: 2rem;
     color: white;
     text-shadow: 0 0 3px black;
 }
+
 h3 {
     font-size: 1.8rem;
     color: white;
@@ -153,10 +168,12 @@ h3 {
     padding: 10px;
     margin: 0px;
 }
+
 p {
     font-size: 1.3rem;
     text-align: center;
 }
+
 h4 {
     font-size: 1.3rem;
     text-align: center;
@@ -209,8 +226,8 @@ textarea {
     margin-top: 3px;
 }
 
-
 /* Right Side of Shop-Info Styling */
+
 
 .reviews-container {
     display: flex;
@@ -224,6 +241,7 @@ textarea {
     margin: 30px;
     height: 975px;
     overflow-y: auto;
+    background-image: url(../assets/TacoliciousTable.jpg);
 }
 
 /* Set up alternating CSS Rules to anchor every 

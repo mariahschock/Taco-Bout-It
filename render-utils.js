@@ -97,6 +97,7 @@ export function renderShopInfo(shop_info) {
 }
 
 export function renderPosts(post) {
+// Renders the constantly displayed elements to the page
     const div = document.createElement('div');
     div.classList.add('community-post');
 
@@ -106,6 +107,37 @@ export function renderPosts(post) {
     const p2 = document.createElement('p');
     p2.textContent = post.contact;
 
-    div.append(p, p2);
+    const button = document.createElement('button');
+    button.classList.add('pop-out-container');
+    button.textContent = 'Add Message';
+
+// renders the hidden form to the post
+    const hiddenDiv = document.createElement('div');
+    hiddenDiv.classList.add('hidden');
+
+    const replyForm = document.createElement('form');
+    replyForm.classList.add('postReplyForm');
+
+    const nameLabel = document.createElement('label');
+    nameLabel.textContent = 'Name';
+    nameLabel.setAttribute('for', 'name');
+
+    const input = document.createElement('input');
+    input.name = 'name';
+    input.type = 'text';
+
+    const contentLabel = document.createElement('label');
+    contentLabel.textContent = 'Message';
+    contentLabel.setAttribute('for', 'content');
+
+    const textarea = document.createElement('textarea');
+    textarea.setAttribute('name', 'content');
+
+
+    nameLabel.append(input);
+    contentLabel.append(textarea);
+    replyForm.append(nameLabel, contentLabel);
+    hiddenDiv.append(replyForm);
+    div.append(p, p2, button, hiddenDiv);
     return div;
 }
