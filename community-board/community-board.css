@@ -34,6 +34,13 @@ header {
     float: left;
     
 }
+.left {
+    width: 50vw;
+    display: flex;
+    float: left;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 .left button {
     height: 30px;
     width: 100px;
