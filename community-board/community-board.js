@@ -50,10 +50,10 @@ createNewPostForm.addEventListener('submit', async (e) => {
         contact: data.get('contact'),
     };
     const response = await createPost(newPost);
-    loadData();
     location.replace('/community-board');
     return response.data;
 });
+
 
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {

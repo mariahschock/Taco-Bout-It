@@ -241,6 +241,7 @@ textarea {
     margin: 30px;
     height: 975px;
     overflow-y: auto;
+    background-image: url(../assets/TacoliciousTable.jpg);
 }
 
 /* Set up alternating CSS Rules to anchor every 
