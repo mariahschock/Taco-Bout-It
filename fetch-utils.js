@@ -46,7 +46,8 @@ export async function communityBoard() {
 
 // Region-page Functions
 export async function getRegions() {
-    const response = await client.from('Regions').select('*');
+    const response = await client.from('Regions')
+        .select('*');
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -55,7 +56,9 @@ export async function getRegions() {
 }
 
 export async function getRegionName(id) {
-    const response = await client.from('Regions').select('*').match({ id: id });
+    const response = await client.from('Regions')
+        .select('*')
+        .match({ id: id });
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -64,7 +67,9 @@ export async function getRegionName(id) {
 }
 
 export async function getTacoShops(id) {
-    const response = await client.from('Shop_info').select('*').match({ region_id: id });
+    const response = await client.from('Shop_info')
+        .select('*')
+        .match({ region_id: id });
     if (response.error) {
         alert('Please sign in to view taco shops :)');
         console.error(response.error.message);
@@ -75,15 +80,19 @@ export async function getTacoShops(id) {
 
 // Shop-info Functions
 export async function getShopInfo(id) {
-    const response = await client.from('Shop_info').select('*').match({ id }).single();
+    const response = await client.from('Shop_info')
+        .select('*')
+        .match({ id })
+        .single();
     return response.data;
 }
 
-// Displays reviews on the page
+        // Displays reviews on the page
 export async function getReviews(id) {
-    const response = await client.from('user_review').select('*').match({
-        shop_id: id,
-    });
+    const response = await client.from('user_review')
+        .select('*')
+        .match({ shop_id: id })
+        .order('created_at');
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -91,9 +100,10 @@ export async function getReviews(id) {
     }
 }
 
-// Adds reviews to the page
+        // Adds reviews to the page
 export async function addReview(review) {
-    const response = await client.from('user_review').insert(review);
+    const response = await client.from('user_review')
+        .insert(review);
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -101,9 +111,11 @@ export async function addReview(review) {
     }
 }
 
-// Deletes reviews from the page
+        // Deletes reviews from the page
 export async function deleteReview(id) {
-    const response = await client.from('user_review').delete().eq('id', id);
+    const response = await client.from('user_review')
+        .delete()
+        .eq('id', id);
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -114,12 +126,15 @@ export async function deleteReview(id) {
                 // Community Board functions
 // Post/Meetup/Community Functions
 export async function fetchPosts() {
-    const response = await client.from('Community_board').select('*').order('created_at');
+    const response = await client.from('Community_board')
+        .select('*')
+        .order('created_at');
     return response.data;
 }
 
 export async function createPost(post) {
-    const response = await client.from('Community_board').insert(post);
+    const response = await client.from('Community_board')
+        .insert(post);
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -128,7 +143,9 @@ export async function createPost(post) {
 }
 
 export async function deletePost(id) {
-    const response = await client.from('Community_board').delete().eq('id', id);
+    const response = await client.from('Community_board')
+        .delete()
+        .eq('id', id);
     if (response.error) {
         console.error(response.error.message);
     } else {
@@ -136,22 +153,25 @@ export async function deletePost(id) {
     }
 }
 
-// Reply to Post functions
-export async function createReply(participant) {
-    const response = await client.from('Participants').insert(participant);
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
-    }
-}
+// // Reply to Post functions
+// export async function createReply(participant) {
+//     const response = await client.from('Participants')
+//         .insert(participant);
+//     if (response.error) {
+//         console.error(response.error.message);
+//     } else {
+//         return response.data;
+//     }
+// }
 
-// Delete reply to post
-export async function deleteReply(id) {
-    const response = await client.from('Participants').delete().eq(id);
-    if (response.error) {
-        console.error(response.error.message);
-    } else {
-        return response.data;
-    }
-}
+// // Delete reply to post
+// export async function deleteReply(id) {
+//     const response = await client.from('Participants')
+//         .delete()
+//         .eq(id);
+//     if (response.error) {
+//         console.error(response.error.message);
+//     } else {
+//         return response.data;
+//     }
+// }
