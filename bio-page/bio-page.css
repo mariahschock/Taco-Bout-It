@@ -1,3 +1,10 @@
+#home {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+}
+
 body {
     background-image: url(../assets/AdobeStock_293514302.jpeg);
 }
@@ -11,11 +18,13 @@ main {
 header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-size: 1.8rem;
-    background-color: rgba(240, 248, 255, 0.654);
-    border: 1px solid;
-    border-radius: 5px;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+a {
+    color: white;
 }
 h1 {
     background-color: rgba(240, 248, 255, 0.654);
@@ -35,11 +44,12 @@ h1 {
     border: 3px solid;
     border-radius: 10px;
     padding: 30px;
+    flex-wrap: wrap;
 }
 
 img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     margin: 30px;
     border-radius: 50%;
