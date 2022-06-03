@@ -23,13 +23,17 @@ button {
 
 }
 
-.left {
-    width: 50vw;
+/* Header Styling */
+button {
+    cursor: pointer;
+}
+
+header {
+    height: 60px;
     display: flex;
     float: left;
     
 }
-
 .left button {
     height: 30px;
     width: 100px;
@@ -71,22 +75,29 @@ footer {
 #tacoBoutIt {
     width: 10vw;
     display: flex;
-    float: right;   
+    float: left;
 }
-#community-board {
-    width: 100%;
+
+/* Body styling */
+
+
+body {
+    background-image: url(..//assets/tacopartypreview.png);
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 15px;
-    margin-top: 300px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    background-attachment: fixed;
 }
+
 main {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
+
 .community-post {
     background-image: url(../assets/dt-taco-hungry.jpeg);
     background-size: cover;
@@ -103,15 +114,39 @@ main {
     overflow-y: auto;
 
 }
-p {
-    padding: 20px;
-    font-size: 1.1rem;
-    width: 200px;
-    margin-top: 25px;
-    
+
+#community-board {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    margin-top: 300px;
+}
+
+/* Footer Styling */
+
+
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-right: 500px;
+}
+
+#tacoBoutIt-button {
+    width: 10vw;
+    display: flex;
+    float: right;   
 }
 
 
+
+    /* Styling for Create New Post */
 .dropdown {
     display: none;
     position: relative;
@@ -148,6 +183,17 @@ form {
     width: 150px;
 
 }
+    
+        /* Styling for Add Message to Post */
+.hidden {
+    display: none;
+    position: absolute;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 20px;
+    border: solid 2px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
+}
 
 body {
     background-image: url(../assets/communityboardbkgrnd.jpeg);
@@ -155,10 +201,13 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
+
+
 #contact {
     display: flex;
     
 }
+
 textarea {
     line-height: 20px;
     padding: 10px;
@@ -176,8 +225,17 @@ button#tacoBoutIt {
     justify-content: center;
     align-items: center;
     background-color:rgb(232, 216, 167);
-    font-size: 1.2rem;
-    
+    font-size: 1.2rem;    
 }
 
-    
+/* Footer Styling */
+
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-right: 500px;
+}

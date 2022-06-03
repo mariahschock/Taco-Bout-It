@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
-</style>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');</style>
     <link rel="stylesheet" href="./community-board.css">
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-
     <title>Taco 'Bout It!</title>
 </head>
 <body>
@@ -24,37 +21,36 @@
     <main>
         <div id="community-board">
         </div>
+        <!-- Temporary Form -->
+        <div class="hidden">
+            <form class="postReplyForm">
+                <label for="name">Name
+                    <input type="text" name="name">
+                </label>
+                <label for="content">
+                    <textarea name="content" placeholder="Type your message here">
+                    </textarea>
+                </label>
+                <button>Submit</button>
+            </form>
+        </div>
+
     </main>
         <div class="dropdown">
-            
             <form id="postItForm">
-                
                 <label for="new-postInfo">New Post Info:
-                <textarea rows="10" cols="50" placeholder="What you wanna taco 'bout?" name="new_post"></textarea>
-
-                
-              </label> 
-              <label for="contact">Contact:
-                <textarea rows="1" cols="25" name="contact"></textarea>
-                  <!-- <input type="text" name="contact" id="contact"> -->
-              </label>
-                                
-
-                                <button id="tacoBoutIt">Taco 'Bout It</button>
-                            </form>
-                            
-                        </div>
-                        
-
-
+                    <textarea rows="10" cols="50" placeholder="What you wanna taco 'bout?" name="new_post"></textarea>
+                </label> 
+                <label for="contact">Contact:
+                    <textarea rows="1" cols="25" name="contact"></textarea>
+                </label>
+                    <button id="tacoBoutIt-button">Taco 'Bout It</button>
+                </form>
             </div>
-             
         </div>
-        
-        <footer>
-            <button id="create">Create Post</button>
-
-        </footer>
+    <footer>
+        <button id="create">Create Post</button>
+    </footer>
 
     <script type="module" src="./community-board.js"></script>
 </body>

@@ -1,10 +1,16 @@
+/* Universal Styling */
+
 * {
     font-family: 'Roboto', sans-serif;
     
 }
+
 button {
     cursor: pointer;
 }
+
+/* Header Styling */
+
 
 header {
     height: 75px;
@@ -29,13 +35,11 @@ header {
     width: 100px;
     margin-bottom: 10px;
 }
+
+/* Body styling */
+
+
 main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-div#shops {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -47,9 +51,16 @@ img {
     height: 250px;
     object-fit: cover;
     margin: 10px;
-    border: solid 1px rgb(231, 223, 223);
-    
+    border: solid 1px rgb(231, 223, 223);  
 }
+
+div#shops {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .shops {
     margin: 20px;
     text-align: center;
@@ -58,18 +69,19 @@ img {
     height: 400px;
     background-color: rgba(131, 86, 30, 0.743);
     backdrop-filter: saturate(150%) blur(15%);
-    
 }
+
 .shops:hover {
     opacity: 0.75;
 }
+
 h1 {
     margin-top: 10px;
     margin-bottom: 0px;
     color: rgb(231, 223, 223);
-    text-shadow: 0 0 3px black;
-    
+    text-shadow: 0 0 3px black;  
 }
+
 header h1 {
     font-size: 3rem;
     text-decoration: underline;
@@ -82,26 +94,18 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 button {
     height: 40px;
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
 }
+
 button:hover {
     opacity: 0.85;
 }
+
 a {
     color: rgb(0, 0, 0);
-}
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-a:active {
     text-decoration: none;
 }
