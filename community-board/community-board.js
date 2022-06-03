@@ -101,5 +101,5 @@ replyToPost.forEach(item => {
         };
         const response = await createReply(newReply);
         return response.data;
-});
+    });
 });
