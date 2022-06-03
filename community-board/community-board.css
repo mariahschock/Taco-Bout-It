@@ -5,7 +5,9 @@ header {
 }
 
 /* Header Styling */
-
+button {
+    cursor: pointer;
+}
 
 header {
     height: 60px;

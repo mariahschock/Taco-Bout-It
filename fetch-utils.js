@@ -3,7 +3,7 @@ const SUPABASE_KEY =
     'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVhaGhtamJrZXZ0cXZqeXJjaWFlIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTM2OTIyMDgsImV4cCI6MTk2OTI2ODIwOH0.D0GZv1xy0QcdmaM9dJr3FCobWoGH6RY4NQSZGvYM7Ek';
 
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
-
+//yes
 export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
