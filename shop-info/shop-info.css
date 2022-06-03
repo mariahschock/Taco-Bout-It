@@ -116,6 +116,9 @@ img {
     display: flex;
     flex-direction: column;
     color: rgba(255, 255, 255, 0.794);
+    background-color: rgba(52, 50, 47, 0.417);
+    border: 3px solid black;
+    margin: 30px;
 }
 
 .shop-info {
@@ -132,11 +135,12 @@ img {
 
 .shop-info a {
     color: black;
-    background-color: rgba(255, 255, 255, 0.794);
+    background-color: rgb(131, 86, 30, 0.743);
     font-size: 1.5rem;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid;
+    margin-top: 20px;
 }
 
 a:hover {
@@ -152,7 +156,9 @@ h2 {
 h3 {
     font-size: 1.8rem;
     color: white;
-    background-color: rgb(131, 86, 30, 0.743);
+    background-color: rgba(23, 22, 21, 0.74);
+    padding: 10px;
+    margin: 0px;
 }
 
 p {
@@ -163,7 +169,26 @@ p {
 h4 {
     font-size: 1.3rem;
     text-align: center;
-    background-color: rgb(131, 86, 30, 0.743);
+    width: 550px;
+    
+}
+#select {
+    width: 150px;
+    height: 30px;  
+}
+#add-review {
+    width: 150px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(232, 216, 167);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    
+
+}
+textarea {
+    margin-top: 20px;
 }
 
 .reviews-form {
@@ -172,7 +197,8 @@ h4 {
     align-items: center;
     height: 50%;
     padding: 10px;
-    bottom: 200px
+    bottom: 200px;
+    
 }
 
 .reviews-form form {
@@ -199,13 +225,14 @@ h4 {
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid;
     column-gap: 20px;
     padding: 10px;
-    border-radius: 25px;
     margin-right: 50px;
-    background-image: url(..//assets/TacoliciousTable.jpg);
-    background-size: cover;
+    background-color: rgba(52, 50, 47, 0.416);
+    margin: 30px;
+    height: 975px;
+    overflow-y: auto;
 }
 
 /* Set up alternating CSS Rules to anchor every 
@@ -226,10 +253,19 @@ second review to the right of the container */
 }
 
 .review:hover {
-    background-color: antiquewhite;
+    background-color: rgba(255, 255, 255, 0.166);
     cursor: pointer;
 }
 
 .review:hover::after {
-    content: '❌';
+    content: '❌ DELETE REVIEW';
+    
+}
+
+body {
+    background-image: url(../assets/tacoshopinfobkgrnd.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }

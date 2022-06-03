@@ -1,19 +1,7 @@
-/* Universal Styling */
-
-
-* {
-    font-family: 'Roboto', sans-serif;   
-}
-
-button {
-    cursor: pointer;
-}
-
-p {
-    padding: 20px;
-    font-size: 1.1rem;
-    width: 200px;
-    margin-top: 25px;
+header {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
 }
 
 /* Header Styling */
@@ -22,7 +10,7 @@ p {
 header {
     height: 60px;
     display: flex;
-    flex-direction: row;
+    float: left;
 }
 .left button {
     height: 30px;
@@ -47,9 +35,22 @@ header {
     background-color:rgb(232, 216, 167);
 
 }
-
-.left {
-    width: 50vw;
+header {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+}
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-right: 500px;
+}
+#tacoBoutIt {
+    width: 10vw;
     display: flex;
     float: left;
 }
@@ -83,10 +84,12 @@ main {
     flex-direction: column;
     width: 450px;
     height: 350px;
-    border: 1px solid black;
+    border: 2px solid rgb(245, 91, 91);
     margin: 10px;
     border-radius: 10px;
     text-align: start;
+    /* box-shadow: rgba(245, 91, 91, 0.51) 0px 1px 2px, rgba(245, 91, 91, 0.386) 0px 2px 4px, rgba(245, 91, 91, 0.693) 0px 4px 8px, rgba(245, 91, 91, 0.329) 0px 8px 16px, rgba(245, 91, 91, 0.07) 0px 16px 32px, rgba(245, 91, 91, 0.177) 0px 32px 64px;  */
+
 }
 
 #community-board {
@@ -168,10 +171,11 @@ form {
     box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
 }
 
-.pop-out-container {
-    width: fit-content;
-    display: flex;
-    align-self: right;
+body {
+    background-image: url(../assets/communityboardbkgrnd.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 
