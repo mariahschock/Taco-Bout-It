@@ -15,15 +15,13 @@ button:hover {
 
 a {
     color: rgb(0, 0, 0);
-    padding: 50px;
-    /* border-radius: 10px;
-    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%); */
-    text-transform: uppercase;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
     width: 100px;
     height: 50px;
     background-size: contain;
-    background-repeat: no-repeat;
-    align-items: flex-end;  
+    background-color: rgba(201, 113, 59, 0.865);
 }
 
 /* Header Styling */
@@ -107,11 +105,11 @@ h1 {
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	/* font-family: 'Montserrat', sans-serif; */
 }
 
  body {
-    background-image: url(../assets/AdobeStock_293514302_Preview.jpeg);
+    background-image: url(../assets/AdobeStock_293514302.jpeg);
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -142,7 +140,7 @@ main {
 } */   
 
 section {
-    width: 80%;
+    width: 70%;
     height: 450px;
     position: relative;
     background-image: url(../assets/taco-map.png);
@@ -151,7 +149,7 @@ section {
     background-repeat: no-repeat;  
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
     margin: 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
 }
 
@@ -206,7 +204,7 @@ footer {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-top: 100px;
+    margin-top: 150px;
     width: 100%;
     overflow-x: auto;
 }
