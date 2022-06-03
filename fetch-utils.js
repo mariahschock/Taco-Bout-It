@@ -115,13 +115,12 @@ export async function deleteReview(id) {
 }
 
                 // Community Board functions
-// Display Community Board Posts
+// Post/Meetup/Community Functions
 export async function fetchPosts() {
     const response = await client.from('Community_board').select('*');
     return response.data;
 }
 
-// Create Community Board Posts
 export async function createPost(post) {
     const response = await client.from('Community_board').insert(post);
     if (response.error) {
@@ -131,7 +130,6 @@ export async function createPost(post) {
     }
 }
 
-// Delete Community Board Posts
 export async function deletePost(id) {
     const response = await client.from('Community_board').delete().eq('id', id);
     if (response.error) {
@@ -141,7 +139,7 @@ export async function deletePost(id) {
     }
 }
 
-// Add Participant-reply to Posts
+// Reply to Post functions
 export async function createReply(participant) {
     const response = await client.from('Participants').insert(participant);
     if (response.error) {
@@ -151,7 +149,7 @@ export async function createReply(participant) {
     }
 }
 
-// Delete Participant from Post
+// Delete reply to post
 export async function deleteReply(id) {
     const response = await client.from('Participants').delete().eq(id);
     if (response.error) {

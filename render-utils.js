@@ -54,12 +54,7 @@ export function renderReviews(user_review) {
     p.textContent = `${user_review.content}`;
 
     const span = document.createElement('span');
-
-    console.log(user_review.rating);
-    span.textContent = `${user_review.rating}`;
-
     span.textContent = `${user_review.rating} 🌮`;
-
     
     div.append(p, span);
     
@@ -96,6 +91,10 @@ export function renderShopInfo(shop_info) {
     return div;
 }
 
+export function renderHiddenForm() {
+    
+}
+
 export function renderPosts(post) {
 // Renders the constantly displayed elements to the page
     const div = document.createElement('div');
@@ -107,13 +106,16 @@ export function renderPosts(post) {
     const p2 = document.createElement('p');
     p2.textContent = post.contact;
 
+    // Button to display the hidden form
     const button = document.createElement('button');
     button.classList.add('pop-out-container');
     button.textContent = 'Add Message';
+    button.value = post.id;
 
-// renders the hidden form to the post
+    // renders the hidden form to the post
     const hiddenDiv = document.createElement('div');
     hiddenDiv.classList.add('hidden');
+    hiddenDiv.id = post.id;
 
     const replyForm = document.createElement('form');
     replyForm.classList.add('postReplyForm');
@@ -133,11 +135,16 @@ export function renderPosts(post) {
     const textarea = document.createElement('textarea');
     textarea.setAttribute('name', 'content');
 
+    const submitFormButton = document.createElement('button');
+    submitFormButton.textContent = 'Submit';
+
+
 
     nameLabel.append(input);
     contentLabel.append(textarea);
-    replyForm.append(nameLabel, contentLabel);
+    replyForm.append(nameLabel, contentLabel, submitFormButton);
     hiddenDiv.append(replyForm);
     div.append(p, p2, button, hiddenDiv);
     return div;
 }
+
