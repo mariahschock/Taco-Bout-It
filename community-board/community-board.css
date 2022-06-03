@@ -1,39 +1,39 @@
+/* Universal Styling */
 
-body {
-    background-image: url(..//assets/tacopartypreview.png);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.9;
-    background-attachment: fixed;
-}
-header {
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-}
 * {
     font-family: 'Roboto', sans-serif;
     
 }
+
 button {
     cursor: pointer;
 
+}
+
+p {
+    padding: 20px;
+    font-size: 1.1rem;
+    width: 200px;
+    margin-top: 25px;  
 }
 
 /* Header Styling */
-button {
-    cursor: pointer;
-}
+
 
 header {
-    height: 60px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+    width: 50vw;
     display: flex;
     float: left;
-    
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
+
 .left button {
     height: 30px;
     width: 100px;
@@ -57,38 +57,14 @@ header {
     background-color:rgb(232, 216, 167);
 
 }
-header {
-    height: 75px;
-    display: flex;
-    flex-direction: row;
-}
-
-footer {
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
-    margin-right: 500px;
-}
-#tacoBoutIt {
-    width: 10vw;
-    display: flex;
-    float: left;
-}
 
 /* Body styling */
 
 
 body {
-    background-image: url(..//assets/tacopartypreview.png);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../assets/communityboardbkgrnd.jpeg);
     background-position: center;
-    opacity: 0.9;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -112,7 +88,6 @@ main {
     border-radius: 10px;
     text-align: start;
     overflow-y: auto;
-
 }
 
 #community-board {
@@ -125,44 +100,21 @@ main {
     margin-top: 300px;
 }
 
-/* Footer Styling */
-
-
-footer {
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
-    margin-right: 500px;
-}
-
-#tacoBoutIt-button {
-    width: 10vw;
-    display: flex;
-    float: right;   
-}
-
-
-
     /* Styling for Create New Post */
+    
 .dropdown {
     display: none;
     position: relative;
     z-index: 10;
     background-color: rgba(218, 151, 84, 0.942);
     top: 100px;
-    position: absolute;
     right: 37%;
     max-width: 100%;
     max-height: auto;
     border-radius: 10px;
     padding: 20px;
     font-size: 1.3em;
-    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
-
 }
 
 form {
@@ -181,31 +133,16 @@ form {
     background-color:rgb(232, 216, 167);
     border-radius: 5px;
     width: 150px;
-
 }
     
-        /* Styling for Add Message to Post */
-.hidden {
-    display: none;
-    position: absolute;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    padding: 20px;
-    border: solid 2px;
-    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
-}
-
-body {
-    background-image: url(../assets/communityboardbkgrnd.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-
-#contact {
-    display: flex;
-    
+button#tacoBoutIt {
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(232, 216, 167);
+    font-size: 1.2rem;    
 }
 
 textarea {
@@ -218,17 +155,8 @@ textarea {
     border: 3px solid;   
 }
 
-button#tacoBoutIt {
-    margin-top: 30px;
-    height: 40px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(232, 216, 167);
-    font-size: 1.2rem;    
-}
-
 /* Footer Styling */
+
 
 footer {
     width: 100vw;

@@ -4,6 +4,7 @@
     font-family: 'Roboto', sans-serif;
     
 }
+
 button {
     cursor: pointer;
 }
@@ -48,9 +49,7 @@ header {
 
 .right button {
     width: 100px;
-
     margin-bottom: 10px;
-
     justify-content: center;  
 }
 
@@ -85,11 +84,17 @@ button#community-board {
  /* Body Styles start */
 
  body {
-    background-image: url(../assets/AdobeStock_383284691_Preview\ \(1\).png);
+    background-image: url(../assets/tacoshopinfobkgrnd.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 main {
@@ -108,11 +113,6 @@ img {
     padding: 10px;
 }
 
-.title {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
 
 /* Left Side of Shop-Info Styling */
     /* Shop Info */
@@ -180,10 +180,12 @@ h4 {
     width: 550px;
     
 }
+
 #select {
     width: 150px;
     height: 30px;  
 }
+
 #add-review {
     width: 150px;
     height: 40px;
@@ -192,9 +194,8 @@ h4 {
     background-color:rgb(232, 216, 167);
     margin-bottom: 20px;
     border-radius: 5px;
-    
-
 }
+
 textarea {
     margin-top: 20px;
 }
@@ -205,8 +206,7 @@ textarea {
     align-items: center;
     height: 50%;
     padding: 10px;
-    bottom: 200px;
-    
+    bottom: 200px;  
 }
 
 .reviews-form form {
@@ -241,7 +241,6 @@ textarea {
     margin: 30px;
     height: 975px;
     overflow-y: auto;
-    background-image: url(../assets/TacoliciousTable.jpg);
 }
 
 /* Set up alternating CSS Rules to anchor every 
@@ -271,10 +270,3 @@ second review to the right of the container */
     
 }
 
-body {
-    background-image: url(../assets/tacoshopinfobkgrnd.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
