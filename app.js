@@ -14,6 +14,7 @@ const section = document.querySelector('section');
 const communityBoardButton = document.getElementById('community-board');
 const authenticationButton = document.getElementById('auth');
 const logoutButton = document.getElementById('logout');
+const meetButton = document.getElementById('meet-button');
 
 // Buttons
 communityBoardButton.addEventListener('click', () => {
@@ -29,7 +30,9 @@ communityBoardButton.addEventListener('click', () => {
 logoutButton.addEventListener('click', () => {
     logout();
 });
-
+meetButton.addEventListener('click', () => {
+    window.location.href = './bio-page';
+});
 
 // Sign-Up and Login Form
 

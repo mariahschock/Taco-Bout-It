@@ -1,0 +1,58 @@
+#home {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+}
+
+body {
+    background-image: url(../assets/AdobeStock_293514302.jpeg);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+a {
+    color: white;
+}
+h1 {
+    background-color: rgba(240, 248, 255, 0.654);
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 10px;
+}
+    
+       
+#team-bio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(240, 248, 255, 0.654);
+    border: 3px solid;
+    border-radius: 10px;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 30px;
+    border-radius: 50%;
+    border: 3px solid;
+
+}
