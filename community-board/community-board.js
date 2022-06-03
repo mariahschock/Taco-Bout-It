@@ -8,6 +8,8 @@ const logoutButton = document.getElementById('logout');
 const homeButton = document.getElementById('home');
 const postList = document.getElementById('community-board');
 
+const createNewPostForm = document.getElementById('postItForm');
+
 
 logoutButton.addEventListener('click', () => {
     logout();
@@ -24,34 +26,33 @@ async function loadData() {
     const posts = await fetchPosts();
     for (let post of posts) {
         const postDiv = renderPosts(post);
-        postDiv.addEventListener('click', async () => {
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-button');
+        deleteButton.textContent = 'Delete Post';
+        deleteButton.addEventListener('click', async (e) => {
+            e.preventDefault();
             await deletePost(post.id);
             await loadData();
         });
+        postDiv.append(deleteButton);
         postList.append(postDiv);
     }
 }
 loadData();
 
-const postItForm = document.getElementById('postItForm');
-postItForm.addEventListener('submit', async (e) => {
+
+// For adding new posts to the bulletin
+createNewPostForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const data = new FormData(postItForm);
+    const data = new FormData(createNewPostForm);
     const newPost = {
         new_post: data.get('new_post'),
         contact: data.get('contact'),
     };
-    const res = await createPost(newPost);
-
-    console.log(res);
-    loadData();
+    const response = await createPost(newPost);
     location.replace('/community-board');
-    // (newPost);
-    // (res);
-
-    
+    return response.data;
 });
-loadData();
 
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {
@@ -61,7 +62,4 @@ createButton.addEventListener('click', () => {
     } else {
         displayForm.style.display = 'block';
     }
-
 });
-
-

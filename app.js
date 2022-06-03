@@ -34,7 +34,6 @@ logoutButton.addEventListener('click', () => {
 // Sign-Up and Login Form
 
 authenticationButton.addEventListener('click', () => {
-    console.log('clicking');
     const displayForm = document.querySelector('.dropdown');  
     if (displayForm.style.display === 'block') {
         displayForm.style.display = 'none';
@@ -52,6 +51,7 @@ signUpForm.addEventListener('submit', async (event) => {
     }   
     
 });
+
 signInForm.addEventListener('submit', async (event) => {
     event.preventDefault();
     const data = new FormData(signInForm);
@@ -64,6 +64,7 @@ signInForm.addEventListener('submit', async (event) => {
     checkAuth();
     
 });
+
 async function displayRegions() {
     section.textContent = '';
     const regions = await getRegions();

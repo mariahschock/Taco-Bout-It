@@ -1,17 +1,31 @@
+/* Universal Styling */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+
+button {
+    height: 40px;
+    border-radius: 5px;
+    background-color:rgb(232, 216, 167);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+a {
+    color: rgb(0, 0, 0);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    background-color: rgba(201, 113, 59, 0.865);
+}
+
 /* Header Styling */
 
-
-body {
-    background-image: url(../assets/AdobeStock_293514302_Preview.jpeg);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.9;
-    background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
-}
 
 header {
     height: 60px;
@@ -37,20 +51,15 @@ header {
     margin-bottom: 10px;
     z-index: 20;
 }
-button {
-    height: 40px;
-    border-radius: 5px;
-    background-color:rgb(232, 216, 167);
-    cursor: pointer;
-}
-button:hover {
-    opacity: 0.85;
-}
+
 
 .hide {
     display:none;
 }
+
 /* Sign-Up/Login Form Pop Out*/
+
+
 .dropdown {
     display: none;
     position: absolute;
@@ -83,13 +92,28 @@ button:hover {
 }
 
  /* Body Styles start */
-a {
-    color: black;
-    background-color: rgba(245, 245, 245, 0.721);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
-    
+
+h1 {
+    font-size:90px;
+    font-family: 'Permanent Marker';
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 8px 8px #214aedb8, 20px 20px #000000;
+    margin-bottom: 0%;
+}
+
+ body {
+    background-image: url(../assets/AdobeStock_293514302.jpeg);
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+    background-attachment: fixed;
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 .title {
@@ -109,11 +133,10 @@ main {
     font-family: 'Permanent Marker';
     font-size: 4rem;
     margin: 0%;
-} */
-    
+} */   
 
 section {
-    width: 80%;
+    width: 70%;
     height: 450px;
     position: relative;
     background-image: url(../assets/taco-map.png);
@@ -122,13 +145,8 @@ section {
     background-repeat: no-repeat;  
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
     margin: 20px;
-
-    border-radius: 50px;
-
+    border-radius: 5px;
     box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
-
-    
-
 }
 
 .Northwest {
@@ -140,6 +158,9 @@ section {
     left: 25%;
     padding: 0;
     margin: 0;
+    background-position: center;
+    background-size: contain;
+    justify-content: flex-end;
 }
 
 .Northeast {
@@ -149,6 +170,8 @@ section {
     width: 200px;
     top: 105px;
     left: 60%;
+    background-position: center;
+    background-size: contain;
 }
 
 .Southwest {
@@ -158,6 +181,8 @@ section {
     width: 200px;
     top: 300px;
     left: 25%;
+    background-position: center;
+    background-size: contain;
 }
 
 .Southeast {
@@ -167,17 +192,24 @@ section {
     width: 200px;
     top: 300px;
     left: 60%;
+    background-position: center;
+    background-size: contain;
 }
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 150px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-left: 10px;
+}
 
 
-h1{
-    font-size:90px;
-    font-family: 'Permanent Marker';
-    letter-spacing:0.1em;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: white;
-    text-shadow: 8px 8px #214aedb8, 20px 20px #000000;
-    margin-bottom: 0%;
-}

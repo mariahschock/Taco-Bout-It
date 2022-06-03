@@ -1,33 +1,35 @@
+/* Universal Styling */
 
-body {
-    background-image: url(..//assets/tacopartypreview.png);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.9;
-    background-attachment: fixed;
-}
-header {
-    height: 60px;
-    display: flex;
-    flex-direction: row;
-}
 * {
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;  
 }
+
 button {
     cursor: pointer;
+}
 
+p {
+    padding: 10px;
+    font-size: 1rem;
+    width: 200px;
+    margin-top: 25px;  
+}
+
+/* Header Styling */
+
+
+header {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
 }
 
 .left {
     width: 50vw;
     display: flex;
     float: left;
-    
+    flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 .left button {
@@ -53,40 +55,42 @@ button {
     background-color:rgb(232, 216, 167);
 
 }
-header {
-    height: 75px;
-    display: flex;
-    flex-direction: row;
+
+/* Body styling */
+
+
+body {
+    background-image: url(../assets/communityboardbkgrnd.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-footer {
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 40px;
-    margin-right: 500px;
-}
-#tacoBoutIt {
-    width: 10vw;
-    display: flex;
-    float: right;   
-}
-#community-board {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 15px;
-    margin-top: 300px;
-}
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
+    
 }
+
+h1 {
+    font-size:90px;
+    font-family: 'Permanent Marker';
+    letter-spacing:0.1em;
+    /* -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgb(255, 253, 253);
+    text-shadow: 8px 8px #214aedb8, 20px #000000; */
+    margin-bottom: 0%;
+    background-color: rgba(85, 87, 85, 0.651);
+    padding: 20px;
+    border: 2px solid rgb(245, 91, 91);
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0 0 6px black;  
+}
+
 .community-post {
     background-image: url(../assets/dt-taco-hungry.jpeg);
     background-size: cover;
@@ -100,37 +104,47 @@ main {
     margin: 10px;
     border-radius: 10px;
     text-align: start;
-    /* box-shadow: rgba(245, 91, 91, 0.51) 0px 1px 2px, rgba(245, 91, 91, 0.386) 0px 2px 4px, rgba(245, 91, 91, 0.693) 0px 4px 8px, rgba(245, 91, 91, 0.329) 0px 8px 16px, rgba(245, 91, 91, 0.07) 0px 16px 32px, rgba(245, 91, 91, 0.177) 0px 32px 64px;  */
-
+    overflow-y: auto;
 }
-p {
-    padding: 20px;
-    font-size: 1.1rem;
-    width: 200px;
-    margin-top: 25px;
+
+#community-board {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    margin-top: 100px;
+}
+
+    /* Styling for Create New Post */
     
-}
-
-
 .dropdown {
     display: none;
+<<<<<<< HEAD
     position:absolute;
     z-index: 10;
     background-color: rgba(218, 151, 84, 0.942);
     bottom: 100px;
     right:575px;
+=======
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(218, 151, 84, 0.942);
+    bottom: 350px;
+    right: 450px;
+>>>>>>> af5d824f68f7f491ca2870720f36ec4660e88c10
     max-width: 400px;
     border-radius: 10px;
     padding: 20px;
     font-size: 1.3em;
-    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
-
 }
 
+
 form {
-    height: 600px;
-    width: 500px;
+    height: 500px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -144,19 +158,25 @@ form {
     background-color:rgb(232, 216, 167);
     border-radius: 5px;
     width: 150px;
-
 }
 
-body {
-    background-image: url(../assets/communityboardbkgrnd.jpeg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+.delete-button {
+    width: fit-content;
+    margin-top: 75px;
+    margin-left: 300px;   
+    float: right;
 }
-#contact {
-    display: flex;
     
+button#tacoBoutIt-button {
+    margin-top: 30px;
+    height: 40px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(232, 216, 167);
+    font-size: 1.2rem;    
 }
+
 textarea {
     line-height: 20px;
     padding: 10px;
@@ -166,15 +186,16 @@ textarea {
     margin-top: 10px;
     border: 3px solid;   
 }
-button#tacoBoutIt {
-    margin-top: 30px;
-    height: 40px;
-    border-radius: 5px;
-    justify-content: center;
-    align-items: center;
-    background-color:rgb(232, 216, 167);
-    font-size: 1.2rem;
-    
-}
 
-    
+/* Footer Styling */
+
+
+footer {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    margin-right: 500px;
+}

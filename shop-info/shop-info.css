@@ -1,11 +1,15 @@
-/* Header Styles */
+/* Universal Styling */
+
 * {
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;  
 }
+
 button {
     cursor: pointer;
 }
+
+/* Header Styles */
+
 
 header {
     height: 75px;
@@ -19,6 +23,10 @@ header {
     float: left;
 }
 
+.left button {
+    height: 20px;
+    justify-content: center;
+}
 
 .back {
     display: flex;
@@ -31,14 +39,6 @@ header {
     cursor: pointer;
 }
 
-
-.left button {
-    height: 20px;
-    justify-content: center;
-}
-
-
-
 .right {
     width: 50vw;
     display: flex;
@@ -49,23 +49,27 @@ header {
 .right button {
     width: 100px;
     margin-bottom: 10px;
-
-    
-
     justify-content: center;  
-
 }
 
 button#home {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
     justify-content: center;
+    width: 150px;
+    height: 30px;
+    align-items: center;
 }
+
 button#logout {
     border-radius: 5px;
     background-color:rgb(232, 216, 167);
     justify-content: center;
+    width: 150px;
+    height: 30px;
+    align-items: center;
 }
+
 button#community-board {
     height: 40px;
     border-radius: 5px;
@@ -78,6 +82,13 @@ button#community-board {
 
  /* Body Styles start */
 
+ body {
+    background-image: url(../assets/tacoshopinfobkgrnd.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 .title {
     display: flex;
@@ -90,6 +101,7 @@ main {
     position: relative;
     flex-direction: row;
 }
+
 img {
     width: 350px;
     height: 350px;
@@ -98,11 +110,13 @@ img {
     object-fit: cover;
     border: solid 1px;
     padding: 10px;
-    
 }
+
 
 /* Left Side of Shop-Info Styling */
     /* Shop Info */
+
+
 .shop-section {
     width: 50%;
     height: 100%;
@@ -135,14 +149,17 @@ img {
     border: 1px solid;
     margin-top: 20px;
 }
+
 a:hover {
     opacity: 0.55;
 }
+
 h2 {
     font-size: 2rem;
     color: white;
     text-shadow: 0 0 3px black;
 }
+
 h3 {
     font-size: 1.8rem;
     color: white;
@@ -150,20 +167,23 @@ h3 {
     padding: 10px;
     margin: 0px;
 }
+
 p {
     font-size: 1.3rem;
     text-align: center;
 }
+
 h4 {
     font-size: 1.3rem;
     text-align: center;
-    width: 550px;
-    
+    width: 550px; 
 }
+
 #select {
     width: 150px;
     height: 30px;  
 }
+
 #add-review {
     width: 150px;
     height: 40px;
@@ -172,9 +192,8 @@ h4 {
     background-color:rgb(232, 216, 167);
     margin-bottom: 20px;
     border-radius: 5px;
-    
-
 }
+
 textarea {
     margin-top: 20px;
 }
@@ -185,8 +204,7 @@ textarea {
     align-items: center;
     height: 50%;
     padding: 10px;
-    bottom: 200px;
-    
+    bottom: 200px;   
 }
 
 .reviews-form form {
@@ -206,8 +224,8 @@ textarea {
     margin-top: 3px;
 }
 
-
 /* Right Side of Shop-Info Styling */
+
 
 .reviews-container {
     display: flex;
@@ -221,6 +239,7 @@ textarea {
     margin: 30px;
     height: 975px;
     overflow-y: auto;
+    align-items: center;
 }
 
 /* Set up alternating CSS Rules to anchor every 
@@ -246,14 +265,6 @@ second review to the right of the container */
 }
 
 .review:hover::after {
-    content: '❌ DELETE REVIEW';
-    
+    content: '❌ DELETE REVIEW'; 
 }
 
-body {
-    background-image: url(../assets/tacoshopinfobkgrnd.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}

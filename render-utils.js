@@ -54,12 +54,7 @@ export function renderReviews(user_review) {
     p.textContent = `${user_review.content}`;
 
     const span = document.createElement('span');
-
-    console.log(user_review.rating);
-    span.textContent = `${user_review.rating}`;
-
     span.textContent = `${user_review.rating} 🌮`;
-
     
     div.append(p, span);
     
@@ -88,15 +83,18 @@ export function renderShopInfo(shop_info) {
     const menuA = document.createElement('a');
     menuA.href = `${shop_info.menu}`;
     menuA.textContent = `${shop_info.name} menu`;
-
-    
-
+  
     div.append(h2, img, abouth4, addressh3, phoneh3, menuA,);
     
     return div;
 }
 
+// export function renderHiddenForm() {
+    
+// }
+
 export function renderPosts(post) {
+// Renders the constantly displayed elements to the page
     const div = document.createElement('div');
     div.classList.add('community-post');
 
@@ -106,6 +104,7 @@ export function renderPosts(post) {
     const p2 = document.createElement('p');
     p2.textContent = post.contact;
 
-    div.append(p, p2);
+    div.append(p, p2,);
     return div;
 }
+
