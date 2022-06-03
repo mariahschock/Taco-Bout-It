@@ -48,6 +48,7 @@ shopForm.addEventListener('submit', async (e) => {
     displayReviews();
     shopForm.reset();
 });
+
 // Displays all reviews for the shop being currently viewed
 async function displayReviews() {
     const parameters = new URLSearchParams(window.location.search);
@@ -65,7 +66,6 @@ async function displayReviews() {
     }
 }
 displayReviews();
-
 
 // Displays information of the shop being viewed by database ID
 async function displayShopInfo() {

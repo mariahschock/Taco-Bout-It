@@ -1,13 +1,11 @@
 /* Universal Styling */
 
 * {
-    font-family: 'Roboto', sans-serif;
-    
+    font-family: 'Roboto', sans-serif;  
 }
 
 button {
     cursor: pointer;
-
 }
 
 p {
@@ -75,6 +73,7 @@ main {
     align-items: center;
     
 }
+
 h1 {
     font-size:90px;
     font-family: 'Permanent Marker';
@@ -89,8 +88,7 @@ h1 {
     border: 2px solid rgb(245, 91, 91);
     border-radius: 10px;
     color: white;
-    text-shadow: 0 0 6px black;
-    
+    text-shadow: 0 0 6px black;  
 }
 
 .community-post {
@@ -116,7 +114,7 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     border-radius: 15px;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
     /* Styling for Create New Post */
@@ -127,13 +125,14 @@ h1 {
     z-index: 10;
     background-color: rgba(218, 151, 84, 0.942);
     bottom: 350px;
-    right: 900px;
+    right: 450px;
     max-width: 400px;
     border-radius: 10px;
     padding: 20px;
     font-size: 1.3em;
     box-shadow: rgb(79, 85, 247) 0px 0px 0px 3px, rgb(19, 234, 15) 0px 0px 0px 6px, rgb(235, 255, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
 }
+
 
 form {
     height: 500px;
@@ -156,8 +155,8 @@ form {
 .delete-button {
     width: fit-content;
     margin-top: 75px;
-    margin-left: 300px;
-    
+    margin-left: 300px;   
+    float: right;
 }
     
 button#tacoBoutIt-button {
