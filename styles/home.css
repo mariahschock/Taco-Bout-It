@@ -142,8 +142,7 @@ main {
     font-family: 'Permanent Marker';
     font-size: 4rem;
     margin: 0%;
-} */
-    
+} */   
 
 section {
     width: 80%;
@@ -157,9 +156,6 @@ section {
     margin: 20px;
     border-radius: 50px;
     box-shadow: 5px 5px 7px rgb(33 33 33 / 70%);
-
-    
-
 }
 
 .Northwest {
@@ -171,6 +167,9 @@ section {
     left: 25%;
     padding: 0;
     margin: 0;
+    background-position: center;
+    background-size: contain;
+    justify-content: flex-end;
 }
 
 .Northeast {
@@ -180,6 +179,8 @@ section {
     width: 200px;
     top: 105px;
     left: 60%;
+    background-position: center;
+    background-size: contain;
 }
 
 .Southwest {
@@ -189,6 +190,8 @@ section {
     width: 200px;
     top: 300px;
     left: 25%;
+    background-position: center;
+    background-size: contain;
 }
 
 .Southeast {
@@ -198,7 +201,26 @@ section {
     width: 200px;
     top: 300px;
     left: 60%;
+    background-position: center;
+    background-size: contain;
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 100px;
+    width: 100%;
+    overflow-x: auto;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
 
