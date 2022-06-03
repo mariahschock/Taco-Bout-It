@@ -83,17 +83,15 @@ export function renderShopInfo(shop_info) {
     const menuA = document.createElement('a');
     menuA.href = `${shop_info.menu}`;
     menuA.textContent = `${shop_info.name} menu`;
-
-    
-
+  
     div.append(h2, img, abouth4, addressh3, phoneh3, menuA,);
     
     return div;
 }
 
-export function renderHiddenForm() {
+// export function renderHiddenForm() {
     
-}
+// }
 
 export function renderPosts(post) {
 // Renders the constantly displayed elements to the page
