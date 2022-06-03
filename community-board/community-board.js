@@ -1,5 +1,5 @@
 
-import { logout, home, checkAuth, fetchPosts, createPost, deletePost, } from '../fetch-utils.js';
+import { logout, home, checkAuth, fetchPosts, createPost, deletePost } from '../fetch-utils.js';
 import { renderPosts } from '../render-utils.js';
 
 checkAuth();

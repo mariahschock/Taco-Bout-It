@@ -106,45 +106,7 @@ export function renderPosts(post) {
     const p2 = document.createElement('p');
     p2.textContent = post.contact;
 
-    // Button to display the hidden form
-    const button = document.createElement('button');
-    button.classList.add('pop-out-container');
-    button.textContent = 'Add Message';
-    button.value = post.id;
-
-    // renders the hidden form to the post
-    const hiddenDiv = document.createElement('div');
-    hiddenDiv.classList.add('hidden');
-    hiddenDiv.id = post.id;
-
-    const replyForm = document.createElement('form');
-    replyForm.classList.add('postReplyForm');
-
-    const nameLabel = document.createElement('label');
-    nameLabel.textContent = 'Name';
-    nameLabel.setAttribute('for', 'name');
-
-    const input = document.createElement('input');
-    input.name = 'name';
-    input.type = 'text';
-
-    const contentLabel = document.createElement('label');
-    contentLabel.textContent = 'Message';
-    contentLabel.setAttribute('for', 'content');
-
-    const textarea = document.createElement('textarea');
-    textarea.setAttribute('name', 'content');
-
-    const submitFormButton = document.createElement('button');
-    submitFormButton.textContent = 'Submit';
-
-
-
-    nameLabel.append(input);
-    contentLabel.append(textarea);
-    replyForm.append(nameLabel, contentLabel, submitFormButton);
-    hiddenDiv.append(replyForm);
-    div.append(p, p2, button, hiddenDiv);
+    div.append(p, p2,);
     return div;
 }
 
