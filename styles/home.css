@@ -1,5 +1,5 @@
 /* Universal Styling */
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
 
 button {
@@ -13,22 +13,20 @@ button:hover {
     opacity: 0.85;
 }
 
+a {
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    /* border-radius: 10px;
+    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%); */
+    text-transform: uppercase;
+    width: 100px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: flex-end;  
+}
 
 /* Header Styling */
-
-
-
-body {
-    background-image: url(../assets/AdobeStock_293514302_Preview.jpeg);
-    display: flex;
-    flex-direction: column;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.9;
-    background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
-}
 
 
 header {
@@ -97,6 +95,20 @@ header {
 
  /* Body Styles start */
 
+h1 {
+    font-size:90px;
+    font-family: 'Permanent Marker';
+    letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 8px 8px #214aedb8, 20px 20px #000000;
+    margin-bottom: 0%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
 
  body {
     background-image: url(../assets/AdobeStock_293514302_Preview.jpeg);
@@ -107,22 +119,7 @@ header {
     background-position: center;
     opacity: 0.9;
     background-attachment: fixed;
-    font-family: 'Roboto', sans-serif;
-}
-
- a {
-    color: rgb(0, 0, 0);
-    padding: 50px;
-    /* border-radius: 10px;
-    box-shadow: 5px 5px 7px rgb(33 33 33 / 70%); */
-    text-transform: uppercase;
-    width: 100px;
-    height: 50px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    align-items: flex-end;
-
-    
+    /* font-family: 'Roboto', sans-serif; */
 }
 
 .title {
@@ -221,16 +218,4 @@ img {
     margin-left: 10px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
 
-
-h1{
-    font-size:90px;
-    font-family: 'Permanent Marker';
-    letter-spacing:0.1em;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: white;
-    text-shadow: 8px 8px #214aedb8, 20px 20px #000000;
-    margin-bottom: 0%;
-}
