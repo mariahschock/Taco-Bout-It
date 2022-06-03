@@ -59,15 +59,15 @@ postItForm.addEventListener('submit', async (e) => {
     const res = await createPost(newPost);
 
     console.log(res);
-    loadData();
     location.replace('/community-board');
     // (newPost);
     // (res);
-
+    
     
 });
 loadData();
 
+loadData();
 const createButton = document.getElementById('create');
 createButton.addEventListener('click', () => {
     const displayForm = document.querySelector('.dropdown');
