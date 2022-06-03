@@ -114,7 +114,7 @@ export async function deleteReview(id) {
                 // Community Board functions
 // Post/Meetup/Community Functions
 export async function fetchPosts() {
-    const response = await client.from('Community_board').select('*');
+    const response = await client.from('Community_board').select('*').order('created_at');
     return response.data;
 }
 
