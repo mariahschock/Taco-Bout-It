@@ -124,8 +124,8 @@ h1 {
     position: fixed;
     z-index: 10;
     background-color: rgba(218, 151, 84, 0.942);
-    bottom: 350px;
-    right: 450px;
+    bottom: 300px;
+    right: 700px;
     max-width: 400px;
     border-radius: 10px;
     padding: 20px;
@@ -190,4 +190,5 @@ footer {
     justify-content: flex-end;
     margin-bottom: 40px;
     margin-right: 500px;
+    margin-top: 50px;
 }
